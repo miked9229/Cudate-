@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EA6D9F22347B1C6F96B1218 /* Pods_Cudate_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4D7FB046ED1324032E3767 /* Pods_Cudate_Tests.framework */; };
+		89E3D2FC4F733706D194CD31 /* Pods_Cudate_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A7836E2965515DD73042C4 /* Pods_Cudate_.framework */; };
 		9234ADB11FA17EFB0012C0CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234ADB01FA17EFB0012C0CA /* AppDelegate.swift */; };
 		9234ADB31FA17EFB0012C0CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234ADB21FA17EFB0012C0CA /* ViewController.swift */; };
 		9234ADB61FA17EFB0012C0CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9234ADB41FA17EFB0012C0CA /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		9234ADBB1FA17EFB0012C0CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9234ADB91FA17EFB0012C0CA /* LaunchScreen.storyboard */; };
 		9234ADC61FA17EFC0012C0CA /* Cudate_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234ADC51FA17EFC0012C0CA /* Cudate_Tests.swift */; };
 		9234ADD11FA17EFC0012C0CA /* Cudate_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234ADD01FA17EFC0012C0CA /* Cudate_UITests.swift */; };
+		9FA7E6110B3FDFEF18A933D5 /* Pods_Cudate_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12658CCDB4D2E209271043D4 /* Pods_Cudate_UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12658CCDB4D2E209271043D4 /* Pods_Cudate_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cudate_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1666B3F432A488CDDB7C0988 /* Pods-Cudate!Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!Tests/Pods-Cudate!Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		4EE5F1C79D35F618B79A883F /* Pods-Cudate!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!/Pods-Cudate!.debug.xcconfig"; sourceTree = "<group>"; };
 		9234ADAD1FA17EFB0012C0CA /* Cudate!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cudate!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234ADB01FA17EFB0012C0CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9234ADB21FA17EFB0012C0CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		9234ADCC1FA17EFC0012C0CA /* Cudate!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cudate!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234ADD01FA17EFC0012C0CA /* Cudate_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cudate_UITests.swift; sourceTree = "<group>"; };
 		9234ADD21FA17EFC0012C0CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		965190D97564B41571DC641E /* Pods-Cudate!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!Tests/Pods-Cudate!Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B8A7836E2965515DD73042C4 /* Pods_Cudate_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cudate_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4F764709DB9DBE4C875BE6 /* Pods-Cudate!UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!UITests/Pods-Cudate!UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD4D7FB046ED1324032E3767 /* Pods_Cudate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cudate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8E5FEFA96023283DE72A17E /* Pods-Cudate!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!/Pods-Cudate!.release.xcconfig"; sourceTree = "<group>"; };
+		E17EB830EA5BF7B1636C0062 /* Pods-Cudate!UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!UITests/Pods-Cudate!UITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E3D2FC4F733706D194CD31 /* Pods_Cudate_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA6D9F22347B1C6F96B1218 /* Pods_Cudate_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA7E6110B3FDFEF18A933D5 /* Pods_Cudate_UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A7A7CBD1799856CE8CB7DAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8A7836E2965515DD73042C4 /* Pods_Cudate_.framework */,
+				BD4D7FB046ED1324032E3767 /* Pods_Cudate_Tests.framework */,
+				12658CCDB4D2E209271043D4 /* Pods_Cudate_UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9234ADA41FA17EFB0012C0CA = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,8 @@
 				9234ADC41FA17EFC0012C0CA /* Cudate!Tests */,
 				9234ADCF1FA17EFC0012C0CA /* Cudate!UITests */,
 				9234ADAE1FA17EFB0012C0CA /* Products */,
+				A7598947D864CB8264246DEE /* Pods */,
+				7A7A7CBD1799856CE8CB7DAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +152,19 @@
 			path = "Cudate!UITests";
 			sourceTree = "<group>";
 		};
+		A7598947D864CB8264246DEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EE5F1C79D35F618B79A883F /* Pods-Cudate!.debug.xcconfig */,
+				C8E5FEFA96023283DE72A17E /* Pods-Cudate!.release.xcconfig */,
+				1666B3F432A488CDDB7C0988 /* Pods-Cudate!Tests.debug.xcconfig */,
+				965190D97564B41571DC641E /* Pods-Cudate!Tests.release.xcconfig */,
+				BA4F764709DB9DBE4C875BE6 /* Pods-Cudate!UITests.debug.xcconfig */,
+				E17EB830EA5BF7B1636C0062 /* Pods-Cudate!UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9234ADD51FA17EFC0012C0CA /* Build configuration list for PBXNativeTarget "Cudate!" */;
 			buildPhases = (
+				B39B6AC22BDF7F3EAA205853 /* [CP] Check Pods Manifest.lock */,
 				9234ADA91FA17EFB0012C0CA /* Sources */,
 				9234ADAA1FA17EFB0012C0CA /* Frameworks */,
 				9234ADAB1FA17EFB0012C0CA /* Resources */,
+				D8444B917BBA1D4FDAFA304B /* [CP] Embed Pods Frameworks */,
+				9474F391A5E700ACF1125E2F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9234ADD81FA17EFC0012C0CA /* Build configuration list for PBXNativeTarget "Cudate!Tests" */;
 			buildPhases = (
+				52337CE974BCDEC8B3B29D04 /* [CP] Check Pods Manifest.lock */,
 				9234ADBD1FA17EFB0012C0CA /* Sources */,
 				9234ADBE1FA17EFB0012C0CA /* Frameworks */,
 				9234ADBF1FA17EFB0012C0CA /* Resources */,
+				B9D291BDC99F1B2B68EAE534 /* [CP] Embed Pods Frameworks */,
+				C78617EC2FD41F7A11EA4EC9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9234ADDB1FA17EFC0012C0CA /* Build configuration list for PBXNativeTarget "Cudate!UITests" */;
 			buildPhases = (
+				E8F6E5551D6217C643E58AD4 /* [CP] Check Pods Manifest.lock */,
 				9234ADC81FA17EFC0012C0CA /* Sources */,
 				9234ADC91FA17EFC0012C0CA /* Frameworks */,
 				9234ADCA1FA17EFC0012C0CA /* Resources */,
+				43627A14FB8FF57D983F7A4D /* [CP] Embed Pods Frameworks */,
+				1E4776C476654001105A2C32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E4776C476654001105A2C32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cudate!UITests/Pods-Cudate!UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43627A14FB8FF57D983F7A4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cudate!UITests/Pods-Cudate!UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52337CE974BCDEC8B3B29D04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9474F391A5E700ACF1125E2F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cudate!/Pods-Cudate!-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B39B6AC22BDF7F3EAA205853 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B9D291BDC99F1B2B68EAE534 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cudate!Tests/Pods-Cudate!Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C78617EC2FD41F7A11EA4EC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cudate!Tests/Pods-Cudate!Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8444B917BBA1D4FDAFA304B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cudate!/Pods-Cudate!-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F6E5551D6217C643E58AD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9234ADA91FA17EFB0012C0CA /* Sources */ = {
@@ -413,6 +600,7 @@
 		};
 		9234ADD61FA17EFC0012C0CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EE5F1C79D35F618B79A883F /* Pods-Cudate!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 59246CF2XH;
@@ -426,6 +614,7 @@
 		};
 		9234ADD71FA17EFC0012C0CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8E5FEFA96023283DE72A17E /* Pods-Cudate!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 59246CF2XH;
@@ -439,6 +628,7 @@
 		};
 		9234ADD91FA17EFC0012C0CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1666B3F432A488CDDB7C0988 /* Pods-Cudate!Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +644,7 @@
 		};
 		9234ADDA1FA17EFC0012C0CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 965190D97564B41571DC641E /* Pods-Cudate!Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +660,7 @@
 		};
 		9234ADDC1FA17EFC0012C0CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA4F764709DB9DBE4C875BE6 /* Pods-Cudate!UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 59246CF2XH;
@@ -483,6 +675,7 @@
 		};
 		9234ADDD1FA17EFC0012C0CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E17EB830EA5BF7B1636C0062 /* Pods-Cudate!UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 59246CF2XH;

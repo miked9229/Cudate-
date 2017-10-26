@@ -1,0 +1,6 @@
+framework module Pods_Cudate_Tests {
+  umbrella header "Pods-Cudate!Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
