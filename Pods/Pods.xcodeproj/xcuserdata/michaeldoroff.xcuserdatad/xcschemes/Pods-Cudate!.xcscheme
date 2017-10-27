@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '419A6238230513BD97A800C26449E7E8'
+               BlueprintIdentifier = 'FADA1C2978B842C48C2F52FB7D632C31'
                BlueprintName = 'Pods-Cudate!'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-Cudate!.framework'>

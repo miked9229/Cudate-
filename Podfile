@@ -7,6 +7,9 @@ target 'Cudate!' do
 
   # Pods for Cudate!
   pod "LBTAComponents"
+  pod “Firebase/Core”
+  pod “Firebase/Database”
+  pod “Firebase/Auth”
 
   target 'Cudate!Tests' do
     inherit! :search_paths
