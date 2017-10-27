@@ -7,21 +7,38 @@
 //
 
 import UIKit
+import LBTAComponents
+import FBSDKLoginKit
+
+
+let FBLoginButton: FBSDKLoginButton = {
+    let button = FBSDKLoginButton()
+    button.readPermissions = ["email", "public_profile"]
+    return button
+    
+}()
+
+
 
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
-    view.backgroundColor = .red
+        view.addSubview(FBLoginButton)
+        
+        
+        
+        view?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
+        
+        
+        FBLoginButton.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 20, bottomConstant: 60, rightConstant: 20, widthConstant: 20, heightConstant: 70)
+        
+        
     
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
 
 }

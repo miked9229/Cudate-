@@ -10,6 +10,10 @@ target 'Cudate!' do
   pod “Firebase/Core”
   pod “Firebase/Database”
   pod “Firebase/Auth”
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+  pod ‘Google/SignIn’
 
   target 'Cudate!Tests' do
     inherit! :search_paths
