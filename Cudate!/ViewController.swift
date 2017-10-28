@@ -41,7 +41,11 @@ class LoginViewController: UIViewController {
     let nameTextField: UITextField = {
        let tf = UITextField()
        tf.placeholder = "Name"
+       tf.textAlignment = .center
+       tf.backgroundColor = .white
+       tf.borderStyle = .roundedRect
        tf.translatesAutoresizingMaskIntoConstraints = false
+
         return tf
     }()
     
@@ -49,8 +53,21 @@ class LoginViewController: UIViewController {
         let tf = UITextField()
         tf.placeholder = "Email"
         tf.translatesAutoresizingMaskIntoConstraints  = false
+        tf.textAlignment = .center
+        tf.borderStyle = .roundedRect
+        tf.backgroundColor = .white
         return tf
         
+    }()
+    
+    let passwordTextField: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "Password"
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.textAlignment = .center
+        tf.borderStyle = .roundedRect
+        tf.backgroundColor  = .white
+        return tf
     }()
     
     
@@ -89,20 +106,19 @@ class LoginViewController: UIViewController {
     public func setUpEmailPasswordFields() {
         
         let nameContainerView = UIView()
-        nameContainerView.backgroundColor = .red
+//        nameContainerView.backgroundColor = .red
         nameContainerView.translatesAutoresizingMaskIntoConstraints = false
         nameContainerView.layer.cornerRadius = 5
         nameContainerView.layer.masksToBounds = true
         
         let emailContainerView = UIView()
-        emailContainerView.backgroundColor = .blue
+//        emailContainerView.backgroundColor = .blue
         emailContainerView.translatesAutoresizingMaskIntoConstraints = false
         emailContainerView.layer.cornerRadius = 5
         emailContainerView.layer.masksToBounds = true
         
-        
         let passwordContainerView = UIView()
-        passwordContainerView.backgroundColor = .black
+//        passwordContainerView.backgroundColor = .black
         passwordContainerView.translatesAutoresizingMaskIntoConstraints = false
         passwordContainerView.layer.cornerRadius = 5
         passwordContainerView.layer.masksToBounds = true
@@ -117,11 +133,21 @@ class LoginViewController: UIViewController {
         loginStackView.distribution = .fillEqually
         
         view.addSubview(loginStackView)
+        view.addSubview(nameTextField)
+        view.addSubview(emailTextField)
+        view.addSubview(passwordTextField)
+        view.addSubview(registerButton)
+        
         
         loginStackView.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: view.frame.height / 2, leftConstant: 12, bottomConstant: view.frame.height / 4, rightConstant: 12, widthConstant: 0, heightConstant: 0)
         
+        nameTextField.anchor(nameContainerView.topAnchor, left: nameContainerView.leftAnchor, bottom: nameContainerView.bottomAnchor, right: nameContainerView.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
 
+        emailTextField.anchor(emailContainerView.topAnchor, left: emailContainerView.leftAnchor, bottom: emailContainerView.bottomAnchor, right: emailContainerView.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
+        passwordTextField.anchor(passwordContainerView.topAnchor, left: passwordContainerView.leftAnchor, bottom: passwordContainerView.bottomAnchor, right: passwordContainerView.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        registerButton.anchor(loginStackView.bottomAnchor, left: loginStackView.leftAnchor, bottom: nil, right: loginStackView.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
 
         
