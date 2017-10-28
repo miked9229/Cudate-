@@ -70,6 +70,31 @@ class LoginViewController: UIViewController {
         return tf
     }()
     
+    let facebookLoginButton: UIButton = {
+       
+        let button = UIButton(type: .system)
+        button.backgroundColor = UIColor(r: 200, g: 91, b: 151)
+        button.setTitle("Login with Facebook", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 5
+        button.layer.masksToBounds = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let googleLoginButton: UIButton = {
+        
+        let button = UIButton(type: .system)
+        button.backgroundColor = UIColor(r: 40, g: 100, b: 151)
+        button.setTitle("Login with Google", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 5
+        button.layer.masksToBounds = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -137,9 +162,11 @@ class LoginViewController: UIViewController {
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
         view.addSubview(registerButton)
+        view.addSubview(facebookLoginButton)
+        view.addSubview(googleLoginButton)
         
         
-        loginStackView.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: view.frame.height / 2, leftConstant: 12, bottomConstant: view.frame.height / 4, rightConstant: 12, widthConstant: 0, heightConstant: 0)
+        loginStackView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: view.frame.height / 2, leftConstant: 40, bottomConstant: 0, rightConstant: 40, widthConstant: 0, heightConstant: 0)
         
         nameTextField.anchor(nameContainerView.topAnchor, left: nameContainerView.leftAnchor, bottom: nameContainerView.bottomAnchor, right: nameContainerView.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
 
@@ -148,6 +175,10 @@ class LoginViewController: UIViewController {
         passwordTextField.anchor(passwordContainerView.topAnchor, left: passwordContainerView.leftAnchor, bottom: passwordContainerView.bottomAnchor, right: passwordContainerView.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         registerButton.anchor(loginStackView.bottomAnchor, left: loginStackView.leftAnchor, bottom: nil, right: loginStackView.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        facebookLoginButton.anchor(registerButton.bottomAnchor, left: registerButton.leftAnchor, bottom: nil, right: registerButton.rightAnchor, topConstant: 30, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        googleLoginButton.anchor(facebookLoginButton.bottomAnchor, left: registerButton.leftAnchor, bottom: nil, right: registerButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
 
         
