@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         
     }()
 
-    let registerButton: UIButton = {
+    let loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 61, g: 91, b: 151)
         button.setTitle("Register", for: .normal)
@@ -95,7 +95,7 @@ class LoginViewController: UIViewController {
     }()
     
     lazy var loginRegisterSegmentedControl: UISegmentedControl = {
-        let sc = UISegmentedControl(items: ["Login", "Register'"])
+        let sc = UISegmentedControl(items: ["Login", "Register"])
         sc.translatesAutoresizingMaskIntoConstraints = false
         sc.tintColor = .blue
         sc.selectedSegmentIndex = 1
@@ -107,7 +107,18 @@ class LoginViewController: UIViewController {
     
     func handleLoginRegisterChange() {
          
+        let title = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
+        loginRegisterButton.setTitle(title, for: .normal)
+
+        if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
+            
+            nameTextField.isHidden = true
+        } else {
+            nameTextField.isHidden = false
+        }
         
+//    func display
+    
         
     }
     
@@ -155,7 +166,7 @@ class LoginViewController: UIViewController {
         view.addSubview(nameTextField)
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
-        view.addSubview(registerButton)
+        view.addSubview(loginRegisterButton)
         view.addSubview(facebookLoginButton)
         view.addSubview(googleLoginButton)
         
@@ -171,11 +182,11 @@ class LoginViewController: UIViewController {
         
         passwordTextField.anchor(passwordContainerView.topAnchor, left: passwordContainerView.leftAnchor, bottom: passwordContainerView.bottomAnchor, right: passwordContainerView.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        registerButton.anchor(loginStackView.bottomAnchor, left: loginStackView.leftAnchor, bottom: nil, right: loginStackView.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        loginRegisterButton.anchor(loginStackView.bottomAnchor, left: loginStackView.leftAnchor, bottom: nil, right: loginStackView.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        facebookLoginButton.anchor(registerButton.bottomAnchor, left: registerButton.leftAnchor, bottom: nil, right: registerButton.rightAnchor, topConstant: 30, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        facebookLoginButton.anchor(loginRegisterButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 30, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        googleLoginButton.anchor(facebookLoginButton.bottomAnchor, left: registerButton.leftAnchor, bottom: nil, right: registerButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        googleLoginButton.anchor(facebookLoginButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
 
         

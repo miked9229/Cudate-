@@ -23,13 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         
-        
-        
-        
         return true
-    
-    
-    
     
     }
 
