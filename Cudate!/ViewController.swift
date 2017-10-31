@@ -97,7 +97,7 @@ class LoginViewController: UIViewController {
     lazy var loginRegisterSegmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Login", "Register'"])
         sc.translatesAutoresizingMaskIntoConstraints = false
-        sc.tintColor = .white
+        sc.tintColor = .blue
         sc.selectedSegmentIndex = 1
         sc.addTarget(self, action: #selector(handleLoginRegisterChange), for: .valueChanged)
         return sc
@@ -106,7 +106,7 @@ class LoginViewController: UIViewController {
     }()
     
     func handleLoginRegisterChange() {
-        
+         
         
         
     }
@@ -122,8 +122,6 @@ class LoginViewController: UIViewController {
         
         setUpEmailPasswordFields()
 
-        
-        
     }
     
     public func setUpEmailPasswordFields() {
@@ -152,6 +150,7 @@ class LoginViewController: UIViewController {
         loginStackView.axis = .vertical
         loginStackView.distribution = .fillEqually
         
+        view.addSubview(loginRegisterSegmentedControl)
         view.addSubview(loginStackView)
         view.addSubview(nameTextField)
         view.addSubview(emailTextField)
@@ -161,7 +160,10 @@ class LoginViewController: UIViewController {
         view.addSubview(googleLoginButton)
         
         
-        loginStackView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: view.frame.height / 2, leftConstant: 40, bottomConstant: 0, rightConstant: 40, widthConstant: 0, heightConstant: 0)
+        
+        loginRegisterSegmentedControl.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: view.frame.height / 2 , leftConstant: 40, bottomConstant: 0, rightConstant: 40, widthConstant: 0, heightConstant: 0)
+        
+        loginStackView.anchor(loginRegisterSegmentedControl.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 15, leftConstant: 40, bottomConstant: 0, rightConstant: 40, widthConstant: 0, heightConstant: 0)
         
         nameTextField.anchor(nameContainerView.topAnchor, left: nameContainerView.leftAnchor, bottom: nameContainerView.bottomAnchor, right: nameContainerView.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
 
