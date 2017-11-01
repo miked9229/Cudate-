@@ -9,7 +9,7 @@
 import UIKit
 import LBTAComponents
 import FBSDKLoginKit
-
+import FirebaseAuth
 
 
 class LoginViewController: UIViewController {
@@ -33,10 +33,28 @@ class LoginViewController: UIViewController {
         button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
         
         
     }()
+    
+    func handleRegister() {
+        
+        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+        
+        
+        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+            
+            if error != nil {
+                print(error)
+                return
+            }
+            
+        })
+        
+    }
     
     let nameTextField: UITextField = {
        let tf = UITextField()
