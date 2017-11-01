@@ -98,7 +98,7 @@ class LoginViewController: UIViewController {
         let sc = UISegmentedControl(items: ["Login", "Register"])
         sc.translatesAutoresizingMaskIntoConstraints = false
         sc.tintColor = .blue
-        sc.selectedSegmentIndex = 1
+        sc.selectedSegmentIndex = 0
         sc.addTarget(self, action: #selector(handleLoginRegisterChange), for: .valueChanged)
         return sc
         
@@ -113,8 +113,16 @@ class LoginViewController: UIViewController {
         if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
             
             nameTextField.isHidden = true
+            facebookLoginButton.isHidden = false
+            googleLoginButton.isHidden = false
+            
+            
         } else {
             nameTextField.isHidden = false
+            facebookLoginButton.isHidden = true
+            googleLoginButton.isHidden = true
+           
+            
         }
         
 //    func display
@@ -130,6 +138,11 @@ class LoginViewController: UIViewController {
 //        view.addSubview(inputsContainerView)
 //        view.addSubview(registerButton)
 //        view.addSubview(nameTextField)
+        
+        
+        loginRegisterButton.setTitle("Login", for: .normal  )
+        
+        nameTextField.isHidden = true
         
         setUpEmailPasswordFields()
 
