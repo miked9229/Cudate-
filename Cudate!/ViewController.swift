@@ -48,7 +48,6 @@ class LoginViewController: UIViewController {
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
             
             if error != nil {
-                print(error)
                 return
             }
             
@@ -84,7 +83,9 @@ class LoginViewController: UIViewController {
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.textAlignment = .center
         tf.borderStyle = .roundedRect
+        tf.isSecureTextEntry = true
         tf.backgroundColor  = .white
+        
         return tf
     }()
     
@@ -218,8 +219,6 @@ class LoginViewController: UIViewController {
         facebookLoginButton.anchor(loginRegisterButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 30, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         googleLoginButton.anchor(facebookLoginButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-        
-
         
     }
 

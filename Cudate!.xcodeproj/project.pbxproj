@@ -128,14 +128,11 @@
 		9234ADAF1FA17EFB0012C0CA /* Cudate! */ = {
 			isa = PBXGroup;
 			children = (
-				9234ADB01FA17EFB0012C0CA /* AppDelegate.swift */,
-				9234ADB21FA17EFB0012C0CA /* ViewController.swift */,
-				9234ADB41FA17EFB0012C0CA /* Main.storyboard */,
-				9234ADB71FA17EFB0012C0CA /* Assets.xcassets */,
-				9234ADB91FA17EFB0012C0CA /* LaunchScreen.storyboard */,
-				9234ADBC1FA17EFB0012C0CA /* Info.plist */,
-				9234ADDE1FA2DDEB0012C0CA /* CustomButtons.swift */,
-				9234ADE01FA94A450012C0CA /* GoogleService-Info.plist */,
+				9234ADE61FAA93BE0012C0CA /* NetworkingCode */,
+				9234ADE51FAA90D80012C0CA /* HelperFiles */,
+				9234ADE41FAA90C70012C0CA /* Controllers */,
+				9234ADE31FAA90C20012C0CA /* Model */,
+				9234ADE21FAA90B40012C0CA /* Views */,
 			);
 			path = "Cudate!";
 			sourceTree = "<group>";
@@ -156,6 +153,49 @@
 				9234ADD21FA17EFC0012C0CA /* Info.plist */,
 			);
 			path = "Cudate!UITests";
+			sourceTree = "<group>";
+		};
+		9234ADE21FAA90B40012C0CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9234ADE31FAA90C20012C0CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9234ADDE1FA2DDEB0012C0CA /* CustomButtons.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9234ADE41FAA90C70012C0CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9234ADB21FA17EFB0012C0CA /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9234ADE51FAA90D80012C0CA /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9234ADB41FA17EFB0012C0CA /* Main.storyboard */,
+				9234ADB01FA17EFB0012C0CA /* AppDelegate.swift */,
+				9234ADB71FA17EFB0012C0CA /* Assets.xcassets */,
+				9234ADB91FA17EFB0012C0CA /* LaunchScreen.storyboard */,
+				9234ADE01FA94A450012C0CA /* GoogleService-Info.plist */,
+				9234ADBC1FA17EFB0012C0CA /* Info.plist */,
+			);
+			name = HelperFiles;
+			sourceTree = "<group>";
+		};
+		9234ADE61FAA93BE0012C0CA /* NetworkingCode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NetworkingCode;
 			sourceTree = "<group>";
 		};
 		A7598947D864CB8264246DEE /* Pods */ = {
