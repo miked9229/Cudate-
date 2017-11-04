@@ -18,6 +18,7 @@
 		9234ADD11FA17EFC0012C0CA /* Cudate_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234ADD01FA17EFC0012C0CA /* Cudate_UITests.swift */; };
 		9234ADDF1FA2DDEB0012C0CA /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234ADDE1FA2DDEB0012C0CA /* CustomButtons.swift */; };
 		9234ADE11FA94A450012C0CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9234ADE01FA94A450012C0CA /* GoogleService-Info.plist */; };
+		9234ADE81FAA96850012C0CA /* FirebaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234ADE71FAA96850012C0CA /* FirebaseNetworking.swift */; };
 		9FA7E6110B3FDFEF18A933D5 /* Pods_Cudate_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12658CCDB4D2E209271043D4 /* Pods_Cudate_UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		9234ADD21FA17EFC0012C0CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234ADDE1FA2DDEB0012C0CA /* CustomButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9234ADE01FA94A450012C0CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9234ADE71FAA96850012C0CA /* FirebaseNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseNetworking.swift; sourceTree = "<group>"; };
 		965190D97564B41571DC641E /* Pods-Cudate!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!Tests/Pods-Cudate!Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B8A7836E2965515DD73042C4 /* Pods_Cudate_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cudate_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4F764709DB9DBE4C875BE6 /* Pods-Cudate!UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!UITests/Pods-Cudate!UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		9234ADE61FAA93BE0012C0CA /* NetworkingCode */ = {
 			isa = PBXGroup;
 			children = (
+				9234ADE71FAA96850012C0CA /* FirebaseNetworking.swift */,
 			);
 			name = NetworkingCode;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9234ADE81FAA96850012C0CA /* FirebaseNetworking.swift in Sources */,
 				9234ADB31FA17EFB0012C0CA /* ViewController.swift in Sources */,
 				9234ADDF1FA2DDEB0012C0CA /* CustomButtons.swift in Sources */,
 				9234ADB11FA17EFB0012C0CA /* AppDelegate.swift in Sources */,

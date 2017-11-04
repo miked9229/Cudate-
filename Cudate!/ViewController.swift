@@ -34,24 +34,31 @@ class LoginViewController: UIViewController {
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         
-        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
+        
+        button.addTarget(self, action: #selector(handleRegisterOrLogin), for: .touchUpInside)
         return button
         
         
     }()
     
-    func handleRegister() {
+    func handleRegisterOrLogin() {
         
-        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
-        
-        
-        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+        if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
             
-            if error != nil {
-                return
-            }
+        Firebase().loginUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField, completionHandlerforLogIn: { (user, error) in
             
+            print(user)
+            print(error)
+        
         })
+        
+        
+        }
+        
+        
+        Firebase().registerUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField) { (user, error) in
+
+        }
         
     }
     
@@ -221,8 +228,6 @@ class LoginViewController: UIViewController {
         googleLoginButton.anchor(facebookLoginButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
     }
-
-    
 
 
 }
