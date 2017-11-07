@@ -13,7 +13,18 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         print("Tab Bar ViewController being called")
+    
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logOut))
+        
     }
     
+    
+    public func logOut() {
+        
+        let loginViewController = LoginViewController()
+        present(loginViewController, animated: true, completion: nil)
+    
+    }
     
     }

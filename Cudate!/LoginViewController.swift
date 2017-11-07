@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
             
         Firebase().loginUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField, completionHandlerforLogIn: { (user, error) in
             
-            logIn()
+            self.logIn()
         
         })
         
@@ -62,7 +62,8 @@ class LoginViewController: UIViewController {
     }
     
     public func logIn() {
-
+        
+        
         
     }
     
