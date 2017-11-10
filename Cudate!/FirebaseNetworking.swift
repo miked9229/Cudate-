@@ -45,6 +45,8 @@ class Firebase {
            
             }
         
+            
+            completionHandlerforLogIn(user, nil)
         })
         
         
