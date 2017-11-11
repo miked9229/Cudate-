@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Cudate!/LoginViewController.swift"
-            timestampString = "531966980.581511"
+            timestampString = "531967908.355794"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "handleRegisterOrLogin()"
             landmarkType = "7">
             <Locations>
@@ -54,17 +54,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cudate!/FirebaseNetworking.swift"
+            timestampString = "531967908.355794"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "loginUserUsingEmailAndPassword(email:password:completionHandlerforLogIn:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Cudate!/FirebaseNetworking.swift"
-            timestampString = "531967643.238967"
+            timestampString = "532052063.352128"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "loginUserUsingEmailAndPassword(email:password:completionHandlerforLogIn:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cudate!/FirebaseNetworking.swift"
+            timestampString = "532052066.23132"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "loginUserUsingEmailAndPassword(email:password:completionHandlerforLogIn:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cudate_.Firebase.loginUserUsingEmailAndPassword (email : __ObjC.UITextField, password : __ObjC.UITextField, completionHandlerforLogIn : (Swift.Optional&lt;__ObjC.FIRUser&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Cudate!"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michaeldoroff/Cudate!/Cudate!/FirebaseNetworking.swift"
+                  timestampString = "532052089.914325"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "559">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cudate_.Firebase.(loginUserUsingEmailAndPassword (email : __ObjC.UITextField, password : __ObjC.UITextField, completionHandlerforLogIn : (Swift.Optional&lt;__ObjC.FIRUser&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Cudate!"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michaeldoroff/Cudate!/Cudate!/FirebaseNetworking.swift"
+                  timestampString = "532052089.917895"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

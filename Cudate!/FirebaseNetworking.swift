@@ -40,6 +40,10 @@ class Firebase {
         
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
             
+            print(user)
+            print(error)
+            
+            
             if error != nil {
                 completionHandlerforLogIn(nil, error! as NSError)
            
@@ -48,12 +52,6 @@ class Firebase {
             
             completionHandlerforLogIn(user, nil)
         })
-        
-        
-        
-        
-        
-        
         
     }
     
