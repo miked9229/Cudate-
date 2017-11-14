@@ -11,6 +11,12 @@ import UIKit
 class TableViewController: UIViewController {
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("This tableview is being called")
+        view.backgroundColor = .white
+    }
     
     
 }

@@ -25,7 +25,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         
-        window?.rootViewController = UINavigationController(rootViewController: TabBarViewController())
+        let tabBarViewController = TabBarViewController()
+        
+        
+        let mapViewController = MapViewController()
+        let tableViewController = TableViewController()
+        
+        let mapImage = UIImage(named: "map")?.withRenderingMode(.alwaysOriginal)
+        
+        mapViewController.tabBarItem = UITabBarItem(title: "Map", image: mapImage, tag: 0)
+        
+        tableViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        
+        let tabArray = [mapViewController, tableViewController]
+        
+        tabBarViewController.viewControllers = tabArray
+        
+        
+        window?.rootViewController = UINavigationController(rootViewController: mapViewController)
         
         return true
     

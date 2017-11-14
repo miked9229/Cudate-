@@ -14,6 +14,7 @@ class TabBarViewController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        view.backgroundColor = .blue
      
         print("Tab Bar ViewController being called")
     
@@ -21,14 +22,13 @@ class TabBarViewController: UITabBarController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logOut))
         
     
-        if FIRAuth.auth()?.currentUser?.uid == nil {
+        if FIRAuth.auth()?.currentUser?.uid != nil {
             logOut()
             
         }
     
     
     }
-    
     
     public func logOut() {
         
@@ -42,7 +42,10 @@ class TabBarViewController: UITabBarController {
         
         
         let loginViewController = LoginViewController()
-        present(loginViewController, animated: true, completion: nil)
+        
+        
+        self.navigationController?.pushViewController(loginViewController, animated: true)
+  
     
     }
     

@@ -47,9 +47,12 @@ class LoginViewController: UIViewController {
             
         Firebase().loginUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField, completionHandlerforLogIn: { (user, error) in
             
-            guard let _ = error else { return }
+            if error == nil {
+                self.dismiss(animated: true, completion: nil)
+                
+            }
             
-            self.dismiss(animated: true, completion: nil)
+          
         
         })
         

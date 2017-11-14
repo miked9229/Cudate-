@@ -37,24 +37,18 @@ class Firebase {
         
         guard let email = email.text, let password = password.text else { return }
         
-        
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
-            
-            print(user)
-            print(error)
-            
             
             if error != nil {
                 completionHandlerforLogIn(nil, error! as NSError)
            
+            } else {
+                
+                completionHandlerforLogIn(user, nil)
+                
             }
-        
-            
-            completionHandlerforLogIn(user, nil)
         })
         
     }
-    
-    
     
 }

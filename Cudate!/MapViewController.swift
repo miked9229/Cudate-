@@ -10,4 +10,12 @@ import UIKit
 
 class MapViewController: UIViewController {
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    
+        view.backgroundColor = .white
+        print("This view is called")
+    }
+    
 }
