@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarViewController.viewControllers = tabArray
         
         
-        window?.rootViewController = UINavigationController(rootViewController: mapViewController)
+        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         
         return true
     

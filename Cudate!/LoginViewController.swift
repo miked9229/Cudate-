@@ -47,8 +47,12 @@ class LoginViewController: UIViewController {
             
         Firebase().loginUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField, completionHandlerforLogIn: { (user, error) in
             
+            print(user)
+            print(error)
+            
             if error == nil {
-                self.dismiss(animated: true, completion: nil)
+               
+                self.navigationController?.pushViewController(MapViewController(), animated: true)
                 
             }
             
@@ -60,6 +64,9 @@ class LoginViewController: UIViewController {
     }
         else {
             Firebase().registerUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField) { (user, error) in
+                
+                print(error)
+                print(user)
                 
             }
             
