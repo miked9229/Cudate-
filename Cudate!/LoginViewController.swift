@@ -46,9 +46,7 @@ class LoginViewController: UIViewController {
         if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
             
         Firebase().loginUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField, completionHandlerforLogIn: { (user, error) in
-            
-            print(user)
-            print(error)
+ 
             
             if error == nil {
                
@@ -65,20 +63,11 @@ class LoginViewController: UIViewController {
         else {
             Firebase().registerUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField) { (user, error) in
                 
-                print(error)
-                print(user)
-                
             }
             
         }
         
 
-        
-    }
-    
-    public func logIn() {
-        
-        
         
     }
     
@@ -176,6 +165,13 @@ class LoginViewController: UIViewController {
         
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkIfDeviceIsAlreadyLoggedIn()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        view.addSubview(FBLoginButton)
@@ -185,11 +181,9 @@ class LoginViewController: UIViewController {
 //        view.addSubview(registerButton)
 //        view.addSubview(nameTextField)
         
-        
+        checkIfDeviceIsAlreadyLoggedIn()
         loginRegisterButton.setTitle("Login", for: .normal  )
-        
         nameTextField.isHidden = true
-        
         setUpEmailPasswordFields()
 
     }
@@ -247,6 +241,20 @@ class LoginViewController: UIViewController {
         
         googleLoginButton.anchor(facebookLoginButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
+    }
+    
+    public func checkIfDeviceIsAlreadyLoggedIn() {
+    
+        if FIRAuth.auth()?.currentUser?.uid != nil {
+        
+            
+            navigationController?.pushViewController(MapViewController(), animated: true)
+            
+            
+            
+        }
+        
+    
     }
 
 
