@@ -10,12 +10,14 @@ import UIKit
 import MapKit
 import LBTAComponents
 import Firebase
+import CoreLocation
 
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     var menuShowing = false
     var leftAnchor: NSLayoutConstraint?
+    let manager = CLLocationManager()
     
  
     let mapView: MKMapView = {
@@ -34,7 +36,6 @@ class MapViewController: UIViewController {
         
     }()
     
-    
     let menuButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 40, g: 100, b: 151)
@@ -47,9 +48,6 @@ class MapViewController: UIViewController {
         return button
    
     }()
-    
-
-    
     
     public func slideOutMenu() {
         
@@ -67,6 +65,34 @@ class MapViewController: UIViewController {
         
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        
+        let span = MKCoordinateSpanMake(0.01, 0.01)
+        
+        let myLocation = CLLocationCoordinate2DMake(location.coordinate.latitude,  location.coordinate.longitude)
+        
+        let region = MKCoordinateRegionMake(myLocation, span)
+        
+     
+        mapView.setRegion(region, animated: true)
+        
+        mapView.showsUserLocation = true
+        
+        
+    }
+    
+    
+    override func viewDidLoad() {
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyKilometer
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+    }
+    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         view.backgroundColor = .white
@@ -94,16 +120,9 @@ class MapViewController: UIViewController {
         
         slideOutView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         slideOutView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//        slideOutView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         slideOutView.heightAnchor.constraint(equalToConstant: view.frame.height).isActive = true
         slideOutView.widthAnchor.constraint(equalToConstant: view.frame.width / 2).isActive = true
         
-        
-    
-     
-        
-
-    
     }
     
     public func logOut() {
