@@ -15,16 +15,6 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
     
     
-    let inputsContainerView: UIView = {
-       let view = UIView()
-       view.backgroundColor = .white
-       view.translatesAutoresizingMaskIntoConstraints = false
-       view.layer.cornerRadius = 5
-       view.layer.masksToBounds = true
-       return view
-        
-    }()
-
     let loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 61, g: 91, b: 151)
@@ -40,7 +30,7 @@ class LoginViewController: UIViewController {
         
         
     }()
-    
+
     func handleRegisterOrLogin() {
         
         if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
@@ -54,8 +44,6 @@ class LoginViewController: UIViewController {
                 
             }
             
-          
-        
         })
         
         
@@ -66,68 +54,8 @@ class LoginViewController: UIViewController {
             }
             
         }
-        
-
-        
+    
     }
-    
-    let nameTextField: UITextField = {
-       let tf = UITextField()
-       tf.placeholder = "Name"
-       tf.textAlignment = .center
-       tf.backgroundColor = .white
-       tf.borderStyle = .roundedRect
-       tf.translatesAutoresizingMaskIntoConstraints = false
-
-        return tf
-    }()
-    
-    let emailTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Email"
-        tf.translatesAutoresizingMaskIntoConstraints  = false
-        tf.textAlignment = .center
-        tf.borderStyle = .roundedRect
-        tf.backgroundColor = .white
-        return tf
-        
-    }()
-    
-    let passwordTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Password"
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.textAlignment = .center
-        tf.borderStyle = .roundedRect
-        tf.isSecureTextEntry = true
-        tf.backgroundColor  = .white
-        
-        return tf
-    }()
-    
-    let facebookLoginButton: UIButton = {
-       
-        let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(r: 200, g: 91, b: 151)
-        button.setTitle("Login with Facebook", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 5
-        button.layer.masksToBounds = true
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    let googleLoginButton: UIButton = {
-        
-        let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(r: 40, g: 100, b: 151)
-        button.setTitle("Login with Google", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 5
-        button.layer.masksToBounds = true
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
     
     lazy var loginRegisterSegmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Login", "Register"])
@@ -151,8 +79,8 @@ class LoginViewController: UIViewController {
             facebookLoginButton.isHidden = false
             googleLoginButton.isHidden = false
             
-            
         } else {
+            
             nameTextField.isHidden = false
             facebookLoginButton.isHidden = true
             googleLoginButton.isHidden = true
@@ -160,12 +88,8 @@ class LoginViewController: UIViewController {
             
         }
         
-//    func display
-    
-        
     }
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkIfDeviceIsAlreadyLoggedIn()
@@ -174,13 +98,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.addSubview(FBLoginButton)
-//        view.addSubview(GoogleSignIn)
         view?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
-//        view.addSubview(inputsContainerView)
-//        view.addSubview(registerButton)
-//        view.addSubview(nameTextField)
-        
         checkIfDeviceIsAlreadyLoggedIn()
         loginRegisterButton.setTitle("Login", for: .normal  )
         nameTextField.isHidden = true
@@ -247,10 +165,7 @@ class LoginViewController: UIViewController {
     
         if FIRAuth.auth()?.currentUser?.uid != nil {
         
-            
             navigationController?.pushViewController(MapViewController(), animated: true)
-            
-            
             
         }
         

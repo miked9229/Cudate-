@@ -13,7 +13,7 @@ import Firebase
 import CoreLocation
 
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController  {
     
     var menuShowing = false
     var leftAnchor: NSLayoutConstraint?
@@ -64,24 +64,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }, completion: nil)
         
     }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[0]
-        
-        let span = MKCoordinateSpanMake(0.01, 0.01)
-        
-        let myLocation = CLLocationCoordinate2DMake(location.coordinate.latitude,  location.coordinate.longitude)
-        
-        let region = MKCoordinateRegionMake(myLocation, span)
-        
-     
-        mapView.setRegion(region, animated: true)
-        
-        mapView.showsUserLocation = true
-        
-        
-    }
-    
     
     override func viewDidLoad() {
         
@@ -141,5 +123,37 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         
     }
+    
+}
+
+extension MapViewController: CLLocationManagerDelegate {
+    
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        
+        let span = MKCoordinateSpanMake(0.01, 0.01)
+        
+        let myLocation = CLLocationCoordinate2DMake(location.coordinate.latitude,  location.coordinate.longitude)
+        
+        let region = MKCoordinateRegionMake(myLocation, span)
+        
+        
+        mapView.setRegion(region, animated: true)
+        
+        mapView.showsUserLocation = true
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
