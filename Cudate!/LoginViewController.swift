@@ -103,6 +103,12 @@ class LoginViewController: UIViewController {
         loginRegisterButton.setTitle("Login", for: .normal  )
         nameTextField.isHidden = true
         setUpEmailPasswordFields()
+    
+        
+        nameTextField.delegate = self
+        passwordTextField.delegate = self
+        emailTextField.delegate = self
+        
 
     }
     
@@ -142,7 +148,6 @@ class LoginViewController: UIViewController {
         view.addSubview(googleLoginButton)
         
         
-        
         loginRegisterSegmentedControl.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: view.frame.height / 2 , leftConstant: 40, bottomConstant: 0, rightConstant: 40, widthConstant: 0, heightConstant: 0)
         
         loginStackView.anchor(loginRegisterSegmentedControl.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 15, leftConstant: 40, bottomConstant: 0, rightConstant: 40, widthConstant: 0, heightConstant: 0)
@@ -164,14 +169,22 @@ class LoginViewController: UIViewController {
     public func checkIfDeviceIsAlreadyLoggedIn() {
     
         if FIRAuth.auth()?.currentUser?.uid != nil {
-        
+            
             navigationController?.pushViewController(MapViewController(), animated: true)
             
         }
         
-    
     }
 
+}
 
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+    
+    
 }
 

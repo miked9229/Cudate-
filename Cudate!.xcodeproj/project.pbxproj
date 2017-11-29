@@ -317,7 +317,7 @@
 				TargetAttributes = {
 					9234ADAC1FA17EFB0012C0CA = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 59246CF2XH;
+						DevelopmentTeam = 2E3GYECC25;
 						ProvisioningStyle = Automatic;
 					};
 					9234ADC01FA17EFB0012C0CA = {
@@ -687,7 +687,7 @@
 			baseConfigurationReference = 4EE5F1C79D35F618B79A883F /* Pods-Cudate!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 59246CF2XH;
+				DEVELOPMENT_TEAM = 2E3GYECC25;
 				INFOPLIST_FILE = "Cudate!/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.google.com.Cudate-";
@@ -701,7 +701,7 @@
 			baseConfigurationReference = C8E5FEFA96023283DE72A17E /* Pods-Cudate!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 59246CF2XH;
+				DEVELOPMENT_TEAM = 2E3GYECC25;
 				INFOPLIST_FILE = "Cudate!/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.google.com.Cudate-";
