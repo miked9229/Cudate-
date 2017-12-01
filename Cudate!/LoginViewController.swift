@@ -69,6 +69,11 @@ class LoginViewController: UIViewController {
     }()
     
     func handleLoginRegisterChange() {
+        
+        nameTextField.text = ""
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        
          
         let title = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
         loginRegisterButton.setTitle(title, for: .normal)
