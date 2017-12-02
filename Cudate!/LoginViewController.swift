@@ -44,6 +44,8 @@ class LoginViewController: UIViewController {
                 
             }
             
+            
+            
         })
         
         
@@ -51,6 +53,19 @@ class LoginViewController: UIViewController {
         else {
             Firebase().registerUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField) { (user, error) in
                 
+                if let error = error {
+                    
+                    
+                    print(error)
+                    
+                    performUIUpdatesOnMain {
+                        
+                        self.raiseMessageToUser(message: error.localizedDescription)
+                        
+                        
+                    }
+            
+                }
             }
             
         }
@@ -67,6 +82,14 @@ class LoginViewController: UIViewController {
         
         
     }()
+    
+    public func raiseMessageToUser(message: String) {
+        
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
+    }
     
     func handleLoginRegisterChange() {
         
