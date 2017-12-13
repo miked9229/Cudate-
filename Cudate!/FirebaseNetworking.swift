@@ -14,7 +14,6 @@ import UIKit
 
 class Firebase {
     
-    
     public func registerUserUsingEmailAndPassword(email: UITextField, password: UITextField, completionHandlerForRegistration: @escaping(_ user: FIRUser?, _ error: NSError?) -> Void) {
         
         guard let email = email.text, let password = password.text else { return }
@@ -48,6 +47,20 @@ class Firebase {
                 
             }
         })
+        
+    }
+    
+    public func HandleVerification(completionHandlerForVerification: @escaping(_ error: NSError?) -> Void){
+        
+        
+        FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (callbackError) in
+
+            //            completionHandlerForVerification(error)
+        })
+        
+        
+        
+        
         
     }
     

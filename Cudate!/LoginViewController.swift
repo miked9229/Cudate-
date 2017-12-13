@@ -14,7 +14,6 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
-    
     let loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 61, g: 91, b: 151)
@@ -23,11 +22,8 @@ class LoginViewController: UIViewController {
         button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
-        
-        
         button.addTarget(self, action: #selector(handleRegisterOrLogin), for: .touchUpInside)
         return button
-        
         
     }()
 
@@ -37,14 +33,12 @@ class LoginViewController: UIViewController {
             
         Firebase().loginUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField, completionHandlerforLogIn: { (user, error) in
  
-            
             if error == nil {
                
+                
                 self.navigationController?.pushViewController(MapViewController(), animated: true)
                 
             }
-            
-            
             
         })
         
@@ -55,16 +49,25 @@ class LoginViewController: UIViewController {
                 
                 if let error = error {
                     
-                    
                     print(error)
+                    
+                    self.clearUserNameAndPasswordFields()
                     
                     performUIUpdatesOnMain {
                         
                         self.raiseMessageToUser(message: error.localizedDescription)
                         
-                        
                     }
             
+                }
+                else {
+                    Firebase().HandleVerification(completionHandlerForVerification: { (error) in
+
+                        
+                    })
+                    
+                
+                
                 }
             }
             
@@ -97,7 +100,6 @@ class LoginViewController: UIViewController {
         emailTextField.text = ""
         passwordTextField.text = ""
         
-         
         let title = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
         loginRegisterButton.setTitle(title, for: .normal)
 
@@ -113,11 +115,20 @@ class LoginViewController: UIViewController {
             facebookLoginButton.isHidden = true
             googleLoginButton.isHidden = true
            
-            
         }
         
     }
-
+    
+    
+    public func clearUserNameAndPasswordFields() {
+        
+        nameTextField.text = ""
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkIfDeviceIsAlreadyLoggedIn()

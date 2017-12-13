@@ -12,7 +12,6 @@ import LBTAComponents
 import Firebase
 import CoreLocation
 
-
 class MapViewController: UIViewController  {
     
     var menuShowing = false
