@@ -35,14 +35,11 @@ class LoginViewController: UIViewController {
  
             if error == nil {
                
-                
                 self.navigationController?.pushViewController(MapViewController(), animated: true)
                 
             }
             
         })
-        
-        
     }
         else {
             Firebase().registerUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField) { (user, error) in

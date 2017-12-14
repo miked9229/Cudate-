@@ -13,7 +13,7 @@ import UIKit
 
 let nameTextField: UITextField = {
     let tf = UITextField()
-    tf.placeholder = "Name"
+    tf.attributedPlaceholder = NSAttributedString(string: "Name", attributes: [NSForegroundColorAttributeName: UIColor.black])
     tf.textAlignment = .center
     tf.backgroundColor = .white
     tf.borderStyle = .roundedRect
@@ -24,7 +24,7 @@ let nameTextField: UITextField = {
 
 let emailTextField: UITextField = {
     let tf = UITextField()
-    tf.placeholder = "Email"
+    tf.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSForegroundColorAttributeName: UIColor.black])
     tf.translatesAutoresizingMaskIntoConstraints  = false
     tf.textAlignment = .center
     tf.borderStyle = .roundedRect
@@ -35,7 +35,7 @@ let emailTextField: UITextField = {
 
 let passwordTextField: UITextField = {
     let tf = UITextField()
-    tf.placeholder = "Password"
+    tf.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.black])
     tf.translatesAutoresizingMaskIntoConstraints = false
     tf.textAlignment = .center
     tf.borderStyle = .roundedRect

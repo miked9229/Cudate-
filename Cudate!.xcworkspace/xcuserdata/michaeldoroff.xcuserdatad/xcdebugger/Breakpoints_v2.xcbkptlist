@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Cudate!/LoginViewController.swift"
-            timestampString = "534534160.833329"
+            timestampString = "534951003.552974"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "setUpEmailPasswordFields()"
             landmarkType = "7">
          </BreakpointContent>
