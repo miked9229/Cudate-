@@ -129,6 +129,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkIfDeviceIsAlreadyLoggedIn()
+        subscribeToKeyboardNotifications()
         
     }
     
@@ -221,6 +222,42 @@ extension LoginViewController: UITextFieldDelegate {
         return false
     }
     
+    func keyboardWillShow(_ notification:Notification) {
+        
+        view.frame.origin.y = -(getKeyboardHeight(notification: notification))
+        
+
+    }
+    
+    func keyboardWillHide(_ notification: Notification) {
+        
+        view.frame.origin.y = 0
+
+    }
+    
+    func getKeyboardHeight(notification: Notification) -> CGFloat {
+        /* This function returns the height of the keyboard and it is called in the
+         above methods keyboardWillShow() and keyboardWillHide() */
+        
+        let userinfo = notification.userInfo
+        let keyboardSize = userinfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
+        return keyboardSize.cgRectValue.height
+        
+    }
+    
+    func subscribeToKeyboardNotifications()  {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
+    }
+    
+    
+    func unsubscribeToKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+    }
+    
     
 }
+
 
