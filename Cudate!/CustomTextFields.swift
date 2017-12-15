@@ -24,7 +24,7 @@ let nameTextField: UITextField = {
 
 let emailTextField: UITextField = {
     let tf = UITextField()
-    tf.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSForegroundColorAttributeName: UIColor.black])
+    tf.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
     tf.translatesAutoresizingMaskIntoConstraints  = false
     tf.textAlignment = .center
     tf.borderStyle = .roundedRect
@@ -35,7 +35,7 @@ let emailTextField: UITextField = {
 
 let passwordTextField: UITextField = {
     let tf = UITextField()
-    tf.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.black])
+    tf.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
     tf.translatesAutoresizingMaskIntoConstraints = false
     tf.textAlignment = .center
     tf.borderStyle = .roundedRect

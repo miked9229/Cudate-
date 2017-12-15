@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 let inputsContainerView: UIView = {
     let view = UIView()
     view.backgroundColor = .white

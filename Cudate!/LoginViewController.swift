@@ -63,8 +63,6 @@ class LoginViewController: UIViewController {
                         
                     })
                     
-                
-                
                 }
             }
             
@@ -105,12 +103,14 @@ class LoginViewController: UIViewController {
             nameTextField.isHidden = true
             facebookLoginButton.isHidden = false
             googleLoginButton.isHidden = false
+            guestLoginButton.isHidden = false
             
         } else {
             
             nameTextField.isHidden = false
             facebookLoginButton.isHidden = true
             googleLoginButton.isHidden = true
+            guestLoginButton.isHidden = true
            
         }
         
@@ -124,7 +124,6 @@ class LoginViewController: UIViewController {
         passwordTextField.text = ""
         
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -147,6 +146,10 @@ class LoginViewController: UIViewController {
         emailTextField.delegate = self
         
 
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     public func setUpEmailPasswordFields() {
@@ -183,6 +186,7 @@ class LoginViewController: UIViewController {
         view.addSubview(loginRegisterButton)
         view.addSubview(facebookLoginButton)
         view.addSubview(googleLoginButton)
+        view.addSubview(guestLoginButton)
         
         
         loginRegisterSegmentedControl.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: view.frame.height / 2 , leftConstant: 40, bottomConstant: 0, rightConstant: 40, widthConstant: 0, heightConstant: 0)
@@ -200,6 +204,12 @@ class LoginViewController: UIViewController {
         facebookLoginButton.anchor(loginRegisterButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 30, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         googleLoginButton.anchor(facebookLoginButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        
+        guestLoginButton.anchor(googleLoginButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+
+       
         
     }
     
