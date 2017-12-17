@@ -33,12 +33,18 @@ class LoginViewController: UIViewController {
             
         Firebase().loginUserUsingEmailAndPassword(email: emailTextField, password: passwordTextField, completionHandlerforLogIn: { (user, error) in
  
-            if error == nil {
-               
-                self.navigationController?.pushViewController(MapViewController(), animated: true)
+            if let error = error {
                 
+                print(error)
+                
+                self.clearUserNameAndPasswordFields()
+                
+                performUIUpdatesOnMain {
+                    
+                    self.raiseMessageToUser(message: error.localizedDescription)
+                    
+                }
             }
-            
         })
     }
         else {
@@ -225,6 +231,8 @@ class LoginViewController: UIViewController {
 
 }
 
+//MARK LoginViewController: UITextFieldDelegate
+
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -236,7 +244,6 @@ extension LoginViewController: UITextFieldDelegate {
         
         view.frame.origin.y = -(getKeyboardHeight(notification: notification))
         
-
     }
     
     func keyboardWillHide(_ notification: Notification) {

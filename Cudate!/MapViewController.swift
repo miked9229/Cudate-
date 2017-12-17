@@ -32,7 +32,6 @@ class MapViewController: UIViewController  {
         
     }()
     
-
     let slideOutView: UIView = {
         let slideView = UIView()
         slideView.backgroundColor = UIColor(r: 232, g: 236, b: 241)
@@ -46,7 +45,6 @@ class MapViewController: UIViewController  {
         return slideView
         
     }()
-    
     
     let menuButton: UIButton = {
         let button = UIButton(type: .system)
@@ -66,12 +64,9 @@ class MapViewController: UIViewController  {
         leftAnchor?.isActive = false
         leftAnchor = slideOutView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
         leftAnchor?.isActive = true
-//        slideOutView.superview?.bringSubview(toFront: slideOutView)
-        
         UIView.animate(withDuration: 0.5, animations: { 
             
             self.view.layoutIfNeeded()
-            
             
         }, completion: nil)
         
@@ -79,12 +74,8 @@ class MapViewController: UIViewController  {
     
     public func respondtoSwipeGesture() {
         
-        print("Trying my best to swipe....")
-        
         slideOutView.backgroundColor = .red
 
-        
-        
     }
     
     override func viewDidLoad() {
@@ -97,12 +88,6 @@ class MapViewController: UIViewController  {
   
     }
     
-    
-    
-    
-    
-    
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         view.backgroundColor = .white
@@ -113,8 +98,6 @@ class MapViewController: UIViewController  {
             logOut()
             
         }
-        
-
         
         view.addSubview(mapView)
         mapView.fillSuperview()
@@ -140,7 +123,6 @@ class MapViewController: UIViewController  {
     
     public func logOut() {
         
-        
         do {
             try FIRAuth.auth()?.signOut()
         } catch let err {
@@ -149,9 +131,7 @@ class MapViewController: UIViewController  {
         
         let loginViewController = LoginViewController()
         
-        
         self.navigationController?.pushViewController(loginViewController, animated: true)
-        
         
     }
     
@@ -163,9 +143,6 @@ extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        
-        
-        print("didUpdateLocation is being called")
         let location = locations[0]
         
         let span = MKCoordinateSpanMake(0.05, 0.05)
@@ -179,10 +156,7 @@ extension MapViewController: CLLocationManagerDelegate {
         
         mapView.showsUserLocation = true
         
-        
         manager.stopUpdatingLocation()
         
     }
-    
-
 }

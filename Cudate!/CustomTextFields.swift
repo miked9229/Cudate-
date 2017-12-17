@@ -13,7 +13,7 @@ import UIKit
 
 let nameTextField: UITextField = {
     let tf = UITextField()
-    tf.attributedPlaceholder = NSAttributedString(string: "Name", attributes: [NSForegroundColorAttributeName: UIColor.black])
+    tf.attributedPlaceholder = NSAttributedString(string: "Name", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
     tf.textAlignment = .center
     tf.backgroundColor = .white
     tf.borderStyle = .roundedRect
