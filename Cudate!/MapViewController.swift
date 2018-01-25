@@ -17,7 +17,6 @@ class MapViewController: UIViewController  {
     var menuShowing = false
     var leftAnchor: NSLayoutConstraint?
     let manager = CLLocationManager()
-    
     let mapView: MKMapView = {
        let mapview = MKMapView()
        return mapview
@@ -46,6 +45,12 @@ class MapViewController: UIViewController  {
         
     }()
     
+    let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.backgroundColor = .red
+        return stackView
+    }()
+    
     let menuButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 40, g: 100, b: 151)
@@ -64,7 +69,8 @@ class MapViewController: UIViewController  {
         leftAnchor?.isActive = false
         leftAnchor = slideOutView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
         leftAnchor?.isActive = true
-        UIView.animate(withDuration: 0.5, animations: { 
+        
+        UIView.animate(withDuration: 0.5, animations: {
             
             self.view.layoutIfNeeded()
             
@@ -104,6 +110,8 @@ class MapViewController: UIViewController  {
         view.addSubview(slideOutView)
         view.addSubview(menuButton)
         view.addSubview(backButtonView)
+        view.addSubview(stackView)
+        
         
         menuButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 55)
     
@@ -116,8 +124,10 @@ class MapViewController: UIViewController  {
         slideOutView.heightAnchor.constraint(equalToConstant: view.frame.height).isActive = true
         slideOutView.widthAnchor.constraint(equalToConstant: view.frame.width / 2).isActive = true
         
+        stackView.bringSubview(toFront: view)
         
-        backButtonView.anchor(slideOutView.topAnchor, left: nil, bottom: nil, right: slideOutView.rightAnchor, topConstant: 4, leftConstant: 0, bottomConstant: 0, rightConstant: 4, widthConstant: 10, heightConstant: 10)
+        stackView.anchor(slideOutView.topAnchor, left: slideOutView.leftAnchor, bottom: slideOutView.bottomAnchor, right: slideOutView.rightAnchor, topConstant: view.frame.height / 8, leftConstant: 0, bottomConstant: view.frame.height / 2, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
         
     }
     
@@ -151,11 +161,8 @@ extension MapViewController: CLLocationManagerDelegate {
         
         let region = MKCoordinateRegionMake(myLocation, span)
         
-        
         mapView.setRegion(region, animated: true)
-        
         mapView.showsUserLocation = true
-        
         manager.stopUpdatingLocation()
         
     }

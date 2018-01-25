@@ -45,6 +45,9 @@ class LoginViewController: UIViewController {
                     
                 }
             }
+            else {
+                self.navigationController?.pushViewController(MapViewController(), animated: true)
+            }
         })
     }
         else {
@@ -213,10 +216,7 @@ class LoginViewController: UIViewController {
         
         
         guestLoginButton.anchor(googleLoginButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-        
-
-       
-        
+    
     }
     
     public func checkIfDeviceIsAlreadyLoggedIn() {
