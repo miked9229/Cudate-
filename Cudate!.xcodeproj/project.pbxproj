@@ -21,7 +21,6 @@
 		9234ADE11FA94A450012C0CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9234ADE01FA94A450012C0CA /* GoogleService-Info.plist */; };
 		9234ADE81FAA96850012C0CA /* FirebaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234ADE71FAA96850012C0CA /* FirebaseNetworking.swift */; };
 		9234ADEC1FB14A8E0012C0CA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234ADEB1FB14A8E0012C0CA /* MapViewController.swift */; };
-		9234ADEE1FB14AA20012C0CA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234ADED1FB14AA20012C0CA /* TableViewController.swift */; };
 		924055391FC9D85200118235 /* CustomGeneralViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924055381FC9D85200118235 /* CustomGeneralViews.swift */; };
 		9240553C1FC9D8BD00118235 /* RegisterHandlerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240553B1FC9D8BD00118235 /* RegisterHandlerClass.swift */; };
 		9240553E1FC9D95F00118235 /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240553D1FC9D95F00118235 /* CustomTextFields.swift */; };
@@ -69,7 +68,6 @@
 		9234ADE01FA94A450012C0CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9234ADE71FAA96850012C0CA /* FirebaseNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseNetworking.swift; sourceTree = "<group>"; };
 		9234ADEB1FB14A8E0012C0CA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		9234ADED1FB14AA20012C0CA /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		924055381FC9D85200118235 /* CustomGeneralViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGeneralViews.swift; sourceTree = "<group>"; };
 		9240553B1FC9D8BD00118235 /* RegisterHandlerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterHandlerClass.swift; sourceTree = "<group>"; };
 		9240553D1FC9D95F00118235 /* CustomTextFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 			children = (
 				9234ADB21FA17EFB0012C0CA /* LoginViewController.swift */,
 				9234ADEB1FB14A8E0012C0CA /* MapViewController.swift */,
-				9234ADED1FB14AA20012C0CA /* TableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -532,7 +529,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9234ADE81FAA96850012C0CA /* FirebaseNetworking.swift in Sources */,
-				9234ADEE1FB14AA20012C0CA /* TableViewController.swift in Sources */,
 				9243778F1FE7776500A7AAC5 /* HelperMethods.swift in Sources */,
 				924055391FC9D85200118235 /* CustomGeneralViews.swift in Sources */,
 				9240553E1FC9D95F00118235 /* CustomTextFields.swift in Sources */,

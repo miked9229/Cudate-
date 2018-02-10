@@ -17,6 +17,7 @@ class MapViewController: UIViewController  {
     var menuShowing = false
     var leftAnchor: NSLayoutConstraint?
     let manager = CLLocationManager()
+   
     let mapView: MKMapView = {
        let mapview = MKMapView()
        return mapview
@@ -64,18 +65,24 @@ class MapViewController: UIViewController  {
    
     }()
     
+    let leftMenuLauncher = LeftMenuLauncher()
+    
+    
     public func slideOutMenu() {
-        
-        leftAnchor?.isActive = false
-        leftAnchor = slideOutView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
-        leftAnchor?.isActive = true
-        
-        UIView.animate(withDuration: 0.5, animations: {
-            
-            self.view.layoutIfNeeded()
-            
-        }, completion: nil)
-        
+//
+//        leftAnchor?.isActive = false
+//        leftAnchor = slideOutView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
+//        leftAnchor?.isActive = true
+//
+//        UIView.animate(withDuration: 0.5, animations: {
+//
+//            self.view.layoutIfNeeded()
+//
+//        }, completion: nil)
+//
+
+        leftMenuLauncher.showMenu()
+    
     }
     
     public func respondtoSwipeGesture() {
@@ -144,6 +151,9 @@ class MapViewController: UIViewController  {
         self.navigationController?.pushViewController(loginViewController, animated: true)
         
     }
+    
+    
+    
     
 }
 
