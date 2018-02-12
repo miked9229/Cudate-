@@ -13,8 +13,7 @@ import Firebase
 import CoreLocation
 
 class MapViewController: UIViewController  {
-    
-    var menuShowing = false
+
     var leftAnchor: NSLayoutConstraint?
     let manager = CLLocationManager()
    
@@ -32,25 +31,8 @@ class MapViewController: UIViewController  {
         
     }()
     
-    let slideOutView: UIView = {
-        let slideView = UIView()
-        slideView.backgroundColor = UIColor(r: 232, g: 236, b: 241)
-        slideView.translatesAutoresizingMaskIntoConstraints = false
-        slideView.layer.cornerRadius = 5
-        slideView.layer.masksToBounds = true
-        var swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondtoSwipeGesture))
-        swipeLeft.direction = .left
-        slideView.addGestureRecognizer(swipeLeft)
 
-        return slideView
-        
-    }()
-    
-    let stackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.backgroundColor = .red
-        return stackView
-    }()
+
     
     let menuButton: UIButton = {
         let button = UIButton(type: .system)
@@ -67,28 +49,10 @@ class MapViewController: UIViewController  {
     
     let leftMenuLauncher = LeftMenuLauncher()
     
-    
     public func slideOutMenu() {
-//
-//        leftAnchor?.isActive = false
-//        leftAnchor = slideOutView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
-//        leftAnchor?.isActive = true
-//
-//        UIView.animate(withDuration: 0.5, animations: {
-//
-//            self.view.layoutIfNeeded()
-//
-//        }, completion: nil)
-//
 
         leftMenuLauncher.showMenu()
     
-    }
-    
-    public func respondtoSwipeGesture() {
-        
-        slideOutView.backgroundColor = .red
-
     }
     
     override func viewDidLoad() {
@@ -114,27 +78,13 @@ class MapViewController: UIViewController  {
         
         view.addSubview(mapView)
         mapView.fillSuperview()
-        view.addSubview(slideOutView)
         view.addSubview(menuButton)
         view.addSubview(backButtonView)
-        view.addSubview(stackView)
-        
+
         
         menuButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 55)
     
-        leftAnchor = slideOutView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -view.frame.width / 2)
-        
-        leftAnchor?.isActive = true
-        
-        slideOutView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        slideOutView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        slideOutView.heightAnchor.constraint(equalToConstant: view.frame.height).isActive = true
-        slideOutView.widthAnchor.constraint(equalToConstant: view.frame.width / 2).isActive = true
-        
-        stackView.bringSubview(toFront: view)
-        
-        stackView.anchor(slideOutView.topAnchor, left: slideOutView.leftAnchor, bottom: slideOutView.bottomAnchor, right: slideOutView.rightAnchor, topConstant: view.frame.height / 8, leftConstant: 0, bottomConstant: view.frame.height / 2, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-        
+
         
     }
     
@@ -151,9 +101,6 @@ class MapViewController: UIViewController  {
         self.navigationController?.pushViewController(loginViewController, animated: true)
         
     }
-    
-    
-    
     
 }
 

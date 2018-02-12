@@ -21,8 +21,6 @@ class LeftMenuLauncher: NSObject {
     }()
     
     let menuItems = ["Your Profile"]
-    
-    
     let cellid = "cellid"
     let cellHeight: CGFloat = 50
     
@@ -56,11 +54,11 @@ class LeftMenuLauncher: NSObject {
     }
     @objc public func handleDismiss() {
        
-        UIView.animate(withDuration: 0.5) {
+        print("Handle Dismiss called")
+        UIView.animate(withDuration: 0.05) {
             self.blackView.alpha = 0
-            
-            if let window = UIApplication.shared.keyWindow {
-                self.collectionView.frame = CGRect(origin: CGPoint(x: 0, y: window.frame.height), size: CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height))
+            if let _ = UIApplication.shared.keyWindow {
+                self.collectionView.frame = CGRect(origin: CGPoint(x: -self.collectionView.frame.width, y: 0), size: CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height))
                 
             }
         }

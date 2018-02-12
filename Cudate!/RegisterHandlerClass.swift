@@ -9,15 +9,4 @@
 import Foundation
 import UIKit
 
-class RegisterHandlerClass  {
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-}
+class RegisterHandlerClass  {}
