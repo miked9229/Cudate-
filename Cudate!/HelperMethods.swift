@@ -19,8 +19,13 @@ class LeftMenuLauncher: NSObject {
         cv.backgroundColor = .white
         return cv
     }()
+
+    let chooserButton: UIButton = {
+       let button = UIButton()
+       return button
+    }()
     
-    let menuItems = ["Your Profile"]
+    
     let cellid = "cellid"
     let cellHeight: CGFloat = 50
     
@@ -43,19 +48,16 @@ class LeftMenuLauncher: NSObject {
             blackView.frame = window.frame
             blackView.alpha = 0
             
-            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.05, delay: 0.05, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 self.blackView.alpha = 1
                 self.collectionView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height))
             }, completion: nil)
             
         }
- 
-        
     }
     @objc public func handleDismiss() {
        
-        print("Handle Dismiss called")
-        UIView.animate(withDuration: 0.05) {
+        UIView.animate(withDuration: 0.5) {
             self.blackView.alpha = 0
             if let _ = UIApplication.shared.keyWindow {
                 self.collectionView.frame = CGRect(origin: CGPoint(x: -self.collectionView.frame.width, y: 0), size: CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height))
