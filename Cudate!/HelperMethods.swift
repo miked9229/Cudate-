@@ -9,9 +9,17 @@
 import UIKit
 
 
-class LeftMenuLauncher: NSObject {
+class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let blackView = UIView()
+    
+    let cellid = "cellid"
+    let cellHeight: CGFloat = 100
+    
+    let settings: [Setting] = {
+        
+        return [Setting(name: "Settings", imageName: "settings"), Setting(name: "Terms & privacy polcy", imageName: "privacy"), Setting(name: "Send Feedback", imageName: "feedback"), Setting(name: "Help", imageName: "help"), Setting(name: "Switch Account", imageName: "switch_account"), Setting(name: "Cancel", imageName: "cancel")]
+    }()
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -26,8 +34,19 @@ class LeftMenuLauncher: NSObject {
     }()
     
     
-    let cellid = "cellid"
-    let cellHeight: CGFloat = 50
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellid, for: indexPath) as! SettingCell
+        
+        let setting = settings[indexPath.item]
+        cell.setting = setting
+        
+        return cell
+    }
+    
+
     
     @objc public func showMenu() {
         if let window = UIApplication.shared.keyWindow {
@@ -55,6 +74,16 @@ class LeftMenuLauncher: NSObject {
             
         }
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     @objc public func handleDismiss() {
        
         UIView.animate(withDuration: 0.5) {
@@ -64,10 +93,13 @@ class LeftMenuLauncher: NSObject {
                 
             }
         }
-        
     }
 
     override init() {
         super.init()
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellid)
     }
 }
