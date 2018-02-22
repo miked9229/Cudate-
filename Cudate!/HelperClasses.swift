@@ -1,5 +1,5 @@
 //
-//  HelperStructs.swift
+//  HelperClasses.swift
 //  Cudate!
 //
 //  Created by Michael Doroff on 2/18/18.
@@ -12,10 +12,8 @@ import Foundation
 class Setting {
    
     let name: String
-    let imageName: String
     
-    init(name: String, imageName: String) {
+    init(name: String) {
         self.name = name
-        self.imageName = imageName
     }
 }

@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-
-
 let nameTextField: UITextField = {
     let tf = UITextField()
     tf.attributedPlaceholder = NSAttributedString(string: "Name", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])

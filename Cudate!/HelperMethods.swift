@@ -18,7 +18,7 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
     
     let settings: [Setting] = {
         
-        return [Setting(name: "Settings", imageName: "settings"), Setting(name: "Terms & privacy polcy", imageName: "privacy"), Setting(name: "Send Feedback", imageName: "feedback"), Setting(name: "Help", imageName: "help"), Setting(name: "Switch Account", imageName: "switch_account"), Setting(name: "Cancel", imageName: "cancel")]
+        return [Setting(name: "My Profile"),Setting(name: "My Map"), Setting(name: "My Places")]
     }()
     
     let collectionView: UICollectionView = {
@@ -35,7 +35,7 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return settings.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellid, for: indexPath) as! SettingCell

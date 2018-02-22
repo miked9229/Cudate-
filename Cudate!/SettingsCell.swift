@@ -20,17 +20,12 @@ class SettingCell: BaseCell {
             
             iconImageView.tintColor = isHighlighted ? .white : .gray
             
-            
         }
     }
     
     var setting: Setting? {
         didSet {
             nameLabel.text = setting?.name
-            
-            if let imageName = setting?.imageName {
-                iconImageView.image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
-            }
             
         }
     }
@@ -51,7 +46,6 @@ class SettingCell: BaseCell {
         return imageView
         
     }()
-    
     
     override func setupViews() {
         super.setupViews()

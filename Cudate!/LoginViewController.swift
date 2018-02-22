@@ -35,8 +35,6 @@ class LoginViewController: UIViewController {
  
             if let error = error {
                 
-                print(error)
-                
                 self.clearUserNameAndPasswordFields()
                 
                 performUIUpdatesOnMain {

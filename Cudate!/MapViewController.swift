@@ -31,9 +31,6 @@ class MapViewController: UIViewController  {
         
     }()
     
-
-
-    
     let menuButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 40, g: 100, b: 151)
@@ -81,11 +78,8 @@ class MapViewController: UIViewController  {
         view.addSubview(menuButton)
         view.addSubview(backButtonView)
 
-        
         menuButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 55)
     
-
-        
     }
     
     public func logOut() {
