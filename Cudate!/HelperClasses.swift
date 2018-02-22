@@ -10,6 +10,7 @@ import Foundation
 
 
 class Setting {
+   
     let name: String
     let imageName: String
     
