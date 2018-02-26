@@ -66,7 +66,6 @@ class LoginViewController: UIViewController {
                 }
                 else {
                     Firebase().HandleVerification(completionHandlerForVerification: { (error) in
-
                         
                     })
                     

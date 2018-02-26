@@ -24,7 +24,7 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .white
+        cv.backgroundColor = UIColor(r: 192, g: 192, b: 192)
         return cv
     }()
 
@@ -37,7 +37,17 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return settings.count
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+      
+        return 0
+        
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellid, for: indexPath) as! SettingCell
         
         let setting = settings[indexPath.item]
@@ -46,7 +56,31 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     
-
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        if section == 1 {
+            return .zero
+        }
+        return CGSize(width: collectionView.frame.width, height: 50)
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
+        UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        
+        
+        if section == 1 {
+            return .zero
+        }
+        
+        return CGSize(width: collectionView.frame.width, height: 64)
+        
+        
+        
+    }
     
     @objc public func showMenu() {
         if let window = UIApplication.shared.keyWindow {
@@ -80,10 +114,7 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
         return CGSize(width: collectionView.frame.width, height: cellHeight)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
+ 
     @objc public func handleDismiss() {
        
         UIView.animate(withDuration: 0.5) {
