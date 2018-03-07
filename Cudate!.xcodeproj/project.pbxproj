@@ -29,6 +29,8 @@
 		924055411FC9DBAA00118235 /* ButtonsFromAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924055401FC9DBAA00118235 /* ButtonsFromAPIs.swift */; };
 		9243778F1FE7776500A7AAC5 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243778E1FE7776500A7AAC5 /* HelperMethods.swift */; };
 		926C488F2043AC4E00C7DDE1 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C488E2043AC4E00C7DDE1 /* CustomCells.swift */; };
+		926C4893204B321200C7DDE1 /* HeaderFooterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C4892204B321100C7DDE1 /* HeaderFooterCells.swift */; };
+		926C4895204B329C00C7DDE1 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C4894204B329C00C7DDE1 /* DataSource.swift */; };
 		9FA7E6110B3FDFEF18A933D5 /* Pods_Cudate_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12658CCDB4D2E209271043D4 /* Pods_Cudate_UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		924055401FC9DBAA00118235 /* ButtonsFromAPIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsFromAPIs.swift; sourceTree = "<group>"; };
 		9243778E1FE7776500A7AAC5 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		926C488E2043AC4E00C7DDE1 /* CustomCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
+		926C4892204B321100C7DDE1 /* HeaderFooterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderFooterCells.swift; path = "/Users/michaeldoroff/Cudate!/Cudate!/HeaderFooterCells.swift"; sourceTree = "<absolute>"; };
+		926C4894204B329C00C7DDE1 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		965190D97564B41571DC641E /* Pods-Cudate!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!Tests/Pods-Cudate!Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B8A7836E2965515DD73042C4 /* Pods_Cudate_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cudate_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4F764709DB9DBE4C875BE6 /* Pods-Cudate!UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!UITests/Pods-Cudate!UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		9234ADE21FAA90B40012C0CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				926C4892204B321100C7DDE1 /* HeaderFooterCells.swift */,
 				9234ADDE1FA2DDEB0012C0CA /* CustomButtons.swift */,
 				924055381FC9D85200118235 /* CustomGeneralViews.swift */,
 				9240553D1FC9D95F00118235 /* CustomTextFields.swift */,
@@ -196,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				9228538D203A2A08005F40A9 /* HelperClasses.swift */,
+				926C4894204B329C00C7DDE1 /* DataSource.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -574,9 +580,11 @@
 			files = (
 				9228538E203A2A08005F40A9 /* HelperClasses.swift in Sources */,
 				9234ADE81FAA96850012C0CA /* FirebaseNetworking.swift in Sources */,
+				926C4893204B321200C7DDE1 /* HeaderFooterCells.swift in Sources */,
 				9243778F1FE7776500A7AAC5 /* HelperMethods.swift in Sources */,
 				9228538A203A296D005F40A9 /* SettingsCell.swift in Sources */,
 				924055391FC9D85200118235 /* CustomGeneralViews.swift in Sources */,
+				926C4895204B329C00C7DDE1 /* DataSource.swift in Sources */,
 				9240553E1FC9D95F00118235 /* CustomTextFields.swift in Sources */,
 				9228538C203A29B9005F40A9 /* BaseCell.swift in Sources */,
 				922FA50E1FD2DB820056E683 /* GCDBlackBox.swift in Sources */,

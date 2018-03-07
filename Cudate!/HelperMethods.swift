@@ -9,8 +9,8 @@
 import UIKit
 
 
-class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+{
     let blackView = UIView()
     
     let cellid = "cellid"
@@ -25,6 +25,7 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = UIColor(r: 192, g: 192, b: 192)
+        
         return cv
     }()
 
@@ -56,8 +57,6 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
         if section == 1 {
@@ -71,15 +70,11 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
         UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         
-        
         if section == 1 {
             return .zero
         }
         
         return CGSize(width: collectionView.frame.width, height: 64)
-        
-        
-        
     }
     
     @objc public func showMenu() {
@@ -90,6 +85,8 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
             
             window.addSubview(blackView)
             window.addSubview(collectionView)
+            
+            collectionView.dataSource = nil
             
             let point = CGPoint(x: 0, y: 0)
             let size = CGSize(width: x, height: window.frame.height)
