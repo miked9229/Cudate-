@@ -58,10 +58,7 @@ class Firebase {
             //            completionHandlerForVerification(error)
         })
         
-        
-        
-        
-        
+
     }
     
 }

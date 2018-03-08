@@ -7,18 +7,22 @@
 //
 
 import UIKit
+import LBTAComponents
 
 
 class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+   
     let blackView = UIView()
     
     let cellid = "cellid"
+    let headerId = "headerID"
+    let footerid = "footerID"
     let cellHeight: CGFloat = 100
     
     let settings: [Setting] = {
         
-        return [Setting(name: "My Profile"),Setting(name: "My Map"), Setting(name: "My Places")]
+        return [Setting(name: "My Profile"),Setting(name: "My Map"), Setting(name: "My Places"),Setting(name: "My Profile"),Setting(name: "My Profile")]
     }()
     
     let collectionView: UICollectionView = {
@@ -85,9 +89,7 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
             
             window.addSubview(blackView)
             window.addSubview(collectionView)
-            
-            collectionView.dataSource = nil
-            
+      
             let point = CGPoint(x: 0, y: 0)
             let size = CGSize(width: x, height: window.frame.height)
             
@@ -109,9 +111,23 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: cellHeight)
+    
     }
     
- 
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if kind == UICollectionElementKindSectionHeader {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+            header.backgroundColor = .blue
+            return header
+        } else {
+            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerid, for: indexPath)
+            footer.backgroundColor = .blue
+            return footer
+        }
+        
+    }
+    
     @objc public func handleDismiss() {
        
         UIView.animate(withDuration: 0.5) {
@@ -127,7 +143,9 @@ class LeftMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
         super.init()
         collectionView.dataSource = self
         collectionView.delegate = self
-        
+
         collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellid)
+        collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerid)
     }
 }

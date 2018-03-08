@@ -10,9 +10,8 @@ import Foundation
 
 
 class Setting {
-   
-    let name: String
     
+    let name: String
     init(name: String) {
         self.name = name
     }

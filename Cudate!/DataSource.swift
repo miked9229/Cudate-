@@ -13,6 +13,12 @@ import LBTAComponents
 class HomeDatasource: Datasource {
     
     
+    let settings: [Setting] = {
+        
+        return [Setting(name: "My Profile"),Setting(name: "My Map"), Setting(name: "My Places")]
+    }()
+    
+    
     override func headerClasses() -> [DatasourceCell.Type]? {
         return [UserHeader.self]
     }
