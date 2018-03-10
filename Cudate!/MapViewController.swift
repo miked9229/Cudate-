@@ -96,7 +96,13 @@ class MapViewController: UIViewController  {
         
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
 }
+
+
 
 //MARK: MapViewController: CLLocationManagerDelegate
 
