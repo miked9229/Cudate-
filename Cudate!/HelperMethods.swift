@@ -10,6 +10,8 @@ import UIKit
 import LBTAComponents
 
 
+//MARK: LeftMenuLauncher: NSObject
+
 class LeftMenuLauncher: NSObject {
    
     let blackView = UIView()
@@ -17,21 +19,20 @@ class LeftMenuLauncher: NSObject {
     let cellid = "cellid"
     let headerId = "headerID"
     let footerid = "footerID"
-    let cellHeight: CGFloat = 100
-    let headerHeight: CGFloat = 115
-    let footerHeight: CGFloat = 80
-    
+    let headerHeight: CGFloat = 50
+    let footerHeight: CGFloat = 50
+    let window = UIApplication.shared.keyWindow
+
     
     let settings: [Setting] = {
         
-        return [Setting(name: "My Profile"),Setting(name: "My Map"), Setting(name: "My Places"),Setting(name: "My Profile"),Setting(name: "My Profile"), Setting(name: "My Profile")]
+        return [Setting(name: "My Profile"),Setting(name: "My Map"), Setting(name: "My Places")]
     }()
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = UIColor(r: 192, g: 192, b: 192)
-        
         return cv
     }()
 
@@ -44,10 +45,15 @@ class LeftMenuLauncher: NSObject {
         if let window = UIApplication.shared.keyWindow {
             
             let x = (window.frame.width - window.frame.width / 3)
+            
+            let extraSpace: CGFloat = (window.frame.height * 0.75)
+   
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             
             window.addSubview(blackView)
             window.addSubview(collectionView)
+
+            collectionView.deselectAllItems()
       
             let point = CGPoint(x: 0, y: 0)
             let size = CGSize(width: x, height: window.frame.height)
@@ -91,14 +97,15 @@ class LeftMenuLauncher: NSObject {
     }
 }
 
+
+//MARK: LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+
 extension LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return settings.count
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
@@ -107,7 +114,6 @@ extension LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellid, for: indexPath) as! SettingCell
         
         let setting = settings[indexPath.item]
@@ -125,45 +131,50 @@ extension LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource
         
     }
     
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
-        UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        
-        if section == 1 {
-            return .zero
-        }
-        
-        return CGSize(width: collectionView.frame.width, height: footerHeight)
-    }
+
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-
-        if kind == UICollectionElementKindSectionHeader {
+    
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
-            header.backgroundColor = .blue
+            header.backgroundColor = .gray
             return header
-        } else {
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerid, for: indexPath)
-            footer.backgroundColor = .blue
-            return footer
-        }
-
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        
+    
+        let extraSpace: CGFloat = (window!.frame.height * 0.60) / CGFloat(settings.count)
+        print(extraSpace)
         let spaceForHeader = headerHeight / CGFloat(settings.count)
         let spaceForFooter = footerHeight / CGFloat(settings.count)
-        let totalSpaceExtra = spaceForHeader + spaceForFooter
+        let totalSpaceExtra = spaceForHeader + spaceForFooter + extraSpace
         
         let totalSizeBeforeHeaderAndFooter = (collectionView.frame.height /  CGFloat(settings.count))
         
-        let totalSizeAfterHeaderAndFooter = totalSizeBeforeHeaderAndFooter - totalSpaceExtra
+        let totalSizeAfterHeaderAndExtraSpace: CGFloat = (totalSizeBeforeHeaderAndFooter - totalSpaceExtra)
+        
+
+            
+        return CGSize(width: collectionView.frame.width, height: totalSizeAfterHeaderAndExtraSpace)
+            
+    
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         
-        return CGSize(width: collectionView.frame.width, height: totalSizeAfterHeaderAndFooter)
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor(r: 192, g: 192, b: 192)
     }
     
 }
