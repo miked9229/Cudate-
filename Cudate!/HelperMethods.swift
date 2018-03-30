@@ -46,8 +46,6 @@ class LeftMenuLauncher: NSObject {
             
             let x = (window.frame.width - window.frame.width / 3)
             
-            let extraSpace: CGFloat = (window.frame.height * 0.75)
-   
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             
             window.addSubview(blackView)
@@ -163,18 +161,45 @@ extension LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        
-    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        
+        var item = indexPath.item
+        
+        InstantiateMenuBasedOnIndexPath(item: item)
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor(r: 192, g: 192, b: 192)
+    }
+    
+    private func InstantiateMenuBasedOnIndexPath(item: Int) {
+        
+        switch item {
+            
+        case 0:
+            
+            print("You picked My Profile")
+            
+        case 1:
+            
+            print("You picked My Map")
+            
+            
+        case 2:
+            
+            print("You picked My Places")
+        
+        default:
+            
+            print("You picked invalid cells")
+            
+        }
+        
+        
+        
     }
     
 }
