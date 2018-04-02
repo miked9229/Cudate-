@@ -66,10 +66,17 @@ class LeftMenuLauncher: NSObject {
             UIView.animate(withDuration: 0.05, delay: 0.05, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 
                 self.blackView.alpha = 1
-                self.collectionView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height))
+
+                NSLayoutConstraint.activate([
+                    
+                    self.collectionView.topAnchor.constraint(equalTo: window.topAnchor),
+                    self.collectionView.leadingAnchor.constraint(equalTo: window.leadingAnchor),
+                    self.collectionView.trailingAnchor.constraint(equalTo: window.trailingAnchor, constant: -x)
+                    
+                    ])
                 
             }, completion: nil)
-            
+        
         }
     }
     
@@ -79,7 +86,9 @@ class LeftMenuLauncher: NSObject {
             self.blackView.alpha = 0
             if let _ = UIApplication.shared.keyWindow {
                 self.collectionView.frame = CGRect(origin: CGPoint(x: -self.collectionView.frame.width, y: 0), size: CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height))
-                
+
+
+
             }
         }
     }
@@ -164,7 +173,7 @@ extension LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        var item = indexPath.item
+        let item = indexPath.item
         
         InstantiateMenuBasedOnIndexPath(item: item)
         
