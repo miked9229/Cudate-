@@ -43,3 +43,12 @@ let passwordTextField: UITextField = {
     return tf
 }()
 
+let searchField: UITextField = {
+    let tf = UITextField()
+    tf.translatesAutoresizingMaskIntoConstraints = false
+    tf.backgroundColor = .red
+    tf.layer.cornerRadius = 5
+    tf.layer.masksToBounds = true
+    return tf
+    
+}()

@@ -77,8 +77,12 @@ class MapViewController: UIViewController  {
         mapView.fillSuperview()
         view.addSubview(menuButton)
         view.addSubview(backButtonView)
+        view.addSubview(searchField)
 
         menuButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 55)
+        
+        searchField.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor,
+                           leftConstant: 20, bottomConstant: 50, rightConstant: 20, widthConstant: 100, heightConstant: 50)
     
     }
     
