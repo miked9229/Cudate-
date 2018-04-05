@@ -46,7 +46,11 @@ let passwordTextField: UITextField = {
 let searchField: UITextField = {
     let tf = UITextField()
     tf.translatesAutoresizingMaskIntoConstraints = false
-    tf.backgroundColor = .red
+//    tf.backgroundColor = UIColor(r: 192, g: 192, b: 192)
+    tf.backgroundColor = .white
+    tf.placeholder = "Search"
+    tf.textColor = .white
+    tf.textAlignment = .center
     tf.layer.cornerRadius = 5
     tf.layer.masksToBounds = true
     return tf
