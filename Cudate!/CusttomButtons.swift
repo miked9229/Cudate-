@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import FBSDKLoginKit
+import GoogleSignIn
+
 
 
 let facebookLoginButton: UIButton = {
@@ -46,3 +48,20 @@ let guestLoginButton: UIButton = {
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
 }()
+
+let FBLoginButton: FBSDKLoginButton = {
+    let FBbutton = FBSDKLoginButton()
+    FBbutton.translatesAutoresizingMaskIntoConstraints = false
+    FBbutton.readPermissions = ["email", "public_profile"]
+    return FBbutton
+    
+}()
+
+let GoogleSignIn: GIDSignInButton = {
+    let Googlebutton = GIDSignInButton()
+    Googlebutton.translatesAutoresizingMaskIntoConstraints = false
+    return Googlebutton
+    
+}()
+
+

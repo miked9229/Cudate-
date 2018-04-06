@@ -23,7 +23,6 @@ class LeftMenuLauncher: NSObject {
     let footerHeight: CGFloat = 50
     let window = UIApplication.shared.keyWindow
 
-    
     let settings: [Setting] = {
         
         return [Setting(name: "My Profile"),Setting(name: "My Map"), Setting(name: "My Places")]
