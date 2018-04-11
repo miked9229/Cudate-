@@ -30,6 +30,10 @@
 		926C488F2043AC4E00C7DDE1 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C488E2043AC4E00C7DDE1 /* CustomCells.swift */; };
 		926C489A20537CCF00C7DDE1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C489920537CCF00C7DDE1 /* UIView.swift */; };
 		926C489C2057617500C7DDE1 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C489B2057617500C7DDE1 /* UICollectionView.swift */; };
+		92EB6A01207AEE2F003B2F6C /* ModelHandlingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB6A00207AEE2F003B2F6C /* ModelHandlingCode.swift */; };
+		92EB6A03207AEEC6003B2F6C /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB6A02207AEEC6003B2F6C /* MyMapViewController.swift */; };
+		92EB6A05207AEEE7003B2F6C /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB6A04207AEEE7003B2F6C /* MyProfileViewController.swift */; };
+		92EB6A07207AEF0B003B2F6C /* MyFavoritePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB6A06207AEF0B003B2F6C /* MyFavoritePlacesViewController.swift */; };
 		9FA7E6110B3FDFEF18A933D5 /* Pods_Cudate_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12658CCDB4D2E209271043D4 /* Pods_Cudate_UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +85,10 @@
 		926C488E2043AC4E00C7DDE1 /* CustomCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
 		926C489920537CCF00C7DDE1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		926C489B2057617500C7DDE1 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		92EB6A00207AEE2F003B2F6C /* ModelHandlingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHandlingCode.swift; sourceTree = "<group>"; };
+		92EB6A02207AEEC6003B2F6C /* MyMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
+		92EB6A04207AEEE7003B2F6C /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		92EB6A06207AEF0B003B2F6C /* MyFavoritePlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritePlacesViewController.swift; sourceTree = "<group>"; };
 		965190D97564B41571DC641E /* Pods-Cudate!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!Tests/Pods-Cudate!Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B8A7836E2965515DD73042C4 /* Pods_Cudate_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cudate_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4F764709DB9DBE4C875BE6 /* Pods-Cudate!UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cudate!UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cudate!UITests/Pods-Cudate!UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,7 +204,7 @@
 		9234ADE31FAA90C20012C0CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9228538D203A2A08005F40A9 /* HelperClasses.swift */,
+				92EB6A00207AEE2F003B2F6C /* ModelHandlingCode.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -206,6 +214,9 @@
 			children = (
 				9234ADB21FA17EFB0012C0CA /* LoginViewController.swift */,
 				9234ADEB1FB14A8E0012C0CA /* MapViewController.swift */,
+				92EB6A02207AEEC6003B2F6C /* MyMapViewController.swift */,
+				92EB6A04207AEEE7003B2F6C /* MyProfileViewController.swift */,
+				92EB6A06207AEF0B003B2F6C /* MyFavoritePlacesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +224,7 @@
 		9234ADE51FAA90D80012C0CA /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
+				9228538D203A2A08005F40A9 /* HelperClasses.swift */,
 				9234ADB41FA17EFB0012C0CA /* Main.storyboard */,
 				9234ADB01FA17EFB0012C0CA /* AppDelegate.swift */,
 				9234ADB71FA17EFB0012C0CA /* Assets.xcassets */,
@@ -578,13 +590,17 @@
 				9228538E203A2A08005F40A9 /* HelperClasses.swift in Sources */,
 				9234ADE81FAA96850012C0CA /* FirebaseNetworking.swift in Sources */,
 				9243778F1FE7776500A7AAC5 /* HelperMethods.swift in Sources */,
+				92EB6A01207AEE2F003B2F6C /* ModelHandlingCode.swift in Sources */,
 				9228538A203A296D005F40A9 /* SettingsCell.swift in Sources */,
 				924055391FC9D85200118235 /* CustomGeneralViews.swift in Sources */,
+				92EB6A07207AEF0B003B2F6C /* MyFavoritePlacesViewController.swift in Sources */,
 				9240553E1FC9D95F00118235 /* CustomTextFields.swift in Sources */,
 				9228538C203A29B9005F40A9 /* BaseCell.swift in Sources */,
 				922FA50E1FD2DB820056E683 /* GCDBlackBox.swift in Sources */,
 				9234ADEC1FB14A8E0012C0CA /* MapViewController.swift in Sources */,
 				9234ADB31FA17EFB0012C0CA /* LoginViewController.swift in Sources */,
+				92EB6A03207AEEC6003B2F6C /* MyMapViewController.swift in Sources */,
+				92EB6A05207AEEE7003B2F6C /* MyProfileViewController.swift in Sources */,
 				926C488F2043AC4E00C7DDE1 /* CustomCells.swift in Sources */,
 				924055411FC9DBAA00118235 /* CusttomButtons.swift in Sources */,
 				926C489A20537CCF00C7DDE1 /* UIView.swift in Sources */,

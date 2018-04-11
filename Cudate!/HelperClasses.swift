@@ -16,3 +16,8 @@ class Setting {
         self.name = name
     }
 }
+
+class HelperLoginMethods {
+    
+    
+}

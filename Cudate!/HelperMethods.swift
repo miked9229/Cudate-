@@ -23,6 +23,7 @@ class LeftMenuLauncher: NSObject {
     let footerHeight: CGFloat = 50
     let window = UIApplication.shared.keyWindow
 
+    
     let settings: [Setting] = {
         
         return [Setting(name: "My Profile"),Setting(name: "My Map"), Setting(name: "My Places")]
@@ -81,7 +82,7 @@ class LeftMenuLauncher: NSObject {
     
     @objc public func handleDismiss() {
        
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.01) {
             self.blackView.alpha = 0
             if let _ = UIApplication.shared.keyWindow {
                 self.collectionView.frame = CGRect(origin: CGPoint(x: -self.collectionView.frame.width, y: 0), size: CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height))
@@ -188,6 +189,13 @@ extension LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource
         switch item {
             
         case 0:
+            if let window = UIApplication.shared.keyWindow {
+                handleDismiss()
+                let vc = MyProfileViewController()
+                let rootVC = window.rootViewController as! UINavigationController
+                rootVC.pushViewController(vc, animated: true)
+                
+            }
             
             print("You picked My Profile")
             

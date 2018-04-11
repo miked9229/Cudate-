@@ -11,7 +11,6 @@ import LBTAComponents
 import FBSDKLoginKit
 import FirebaseAuth
 
-
 class LoginViewController: UIViewController {
     
     let loginRegisterButton: UIButton = {
@@ -27,7 +26,7 @@ class LoginViewController: UIViewController {
         
     }()
 
-    func handleRegisterOrLogin() {
+    func handleRegisterOrLogin(segmentedControl: UISegmentedControl ) {
         
         if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
             
@@ -44,6 +43,7 @@ class LoginViewController: UIViewController {
                 }
             }
             else {
+                
                 self.navigationController?.pushViewController(MapViewController(), animated: true)
             }
         })
@@ -207,12 +207,12 @@ class LoginViewController: UIViewController {
         
         loginRegisterButton.anchor(loginStackView.bottomAnchor, left: loginStackView.leftAnchor, bottom: nil, right: loginStackView.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        facebookLoginButton.anchor(loginRegisterButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 30, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        facebookLoginButton.anchor(loginRegisterButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 15, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         googleLoginButton.anchor(facebookLoginButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         
-        guestLoginButton.anchor(googleLoginButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: nil, right: loginRegisterButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        guestLoginButton.anchor(googleLoginButton.bottomAnchor, left: loginRegisterButton.leftAnchor, bottom: view.bottomAnchor, right: loginRegisterButton.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 5, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     
     }
     
