@@ -86,6 +86,12 @@ class MapViewController: UIViewController  {
     
     }
     
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     public func logOut() {
         
         do {
@@ -103,7 +109,7 @@ class MapViewController: UIViewController  {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    
+
 }
 
 

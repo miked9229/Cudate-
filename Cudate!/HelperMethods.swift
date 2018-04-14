@@ -200,6 +200,13 @@ extension LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource
             print("You picked My Profile")
             
         case 1:
+            if let window = UIApplication.shared.keyWindow {
+                handleDismiss()
+                let vc = MyMapViewController()
+                let rootVC = window.rootViewController as! UINavigationController
+                rootVC.pushViewController(vc, animated: true)
+                
+            }
             
             print("You picked My Map")
             
@@ -208,6 +215,14 @@ extension LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource
             
             print("You picked My Places")
         
+            if let window = UIApplication.shared.keyWindow {
+                handleDismiss()
+                let vc = MyFavoritePlacesViewController()
+                let rootVC = window.rootViewController as! UINavigationController
+                rootVC.pushViewController(vc, animated: true)
+                
+            }
+            
         default:
             
             print("You picked invalid cells")

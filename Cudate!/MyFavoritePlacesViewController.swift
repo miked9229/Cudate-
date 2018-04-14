@@ -12,4 +12,12 @@ import UIKit
 
 class MyFavoritePlacesViewController: UIViewController {
     
+    override func viewDidLoad() {
+        view.backgroundColor = .blue
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.backgroundColor = .black
+    
+    }
+    
+    
 }

@@ -13,6 +13,11 @@ import UIKit
 class MyProfileViewController: UIViewController {
     
     override func viewDidLoad() {
+        view.backgroundColor = .blue
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.backgroundColor = .black
+        
+        
         
     }
     
