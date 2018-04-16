@@ -162,12 +162,9 @@ extension LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource
         
         let totalSizeAfterHeaderAndExtraSpace: CGFloat = (totalSizeBeforeHeaderAndFooter - totalSpaceExtra)
         
-
-            
         return CGSize(width: collectionView.frame.width, height: totalSizeAfterHeaderAndExtraSpace)
             
-    
-        
+
     }
     
     
@@ -186,51 +183,43 @@ extension LeftMenuLauncher: UICollectionViewDelegate, UICollectionViewDataSource
     
     private func InstantiateMenuBasedOnIndexPath(item: Int) {
         
+        var VCDictionary = [0: MyProfileViewController(), 1: MyMapViewController(),
+                            2: MyFavoritePlacesViewController()]
+        
         switch item {
             
-        case 0:
-            if let window = UIApplication.shared.keyWindow {
-                handleDismiss()
-                let vc = MyProfileViewController()
-                let rootVC = window.rootViewController as! UINavigationController
-                rootVC.pushViewController(vc, animated: true)
-                
-            }
+                case 0:
+                    
+                    if let window = UIApplication.shared.keyWindow {
+                        handleDismiss()
+                        let vc = VCDictionary[item]
+                        let rootVC = window.rootViewController as! UINavigationController
+                        rootVC.pushViewController(vc!, animated: true)
+                    }
             
-            print("You picked My Profile")
+                case 1:
+                    if let window = UIApplication.shared.keyWindow {
+                        handleDismiss()
+                        let vc = VCDictionary[item]
+                        let rootVC = window.rootViewController as! UINavigationController
+                        rootVC.pushViewController(vc!, animated: true)
+                        
+                    }
             
-        case 1:
-            if let window = UIApplication.shared.keyWindow {
-                handleDismiss()
-                let vc = MyMapViewController()
-                let rootVC = window.rootViewController as! UINavigationController
-                rootVC.pushViewController(vc, animated: true)
-                
-            }
+                case 2:
             
-            print("You picked My Map")
+                    if let window = UIApplication.shared.keyWindow {
+                        handleDismiss()
+                        let vc = VCDictionary[item]
+                        let rootVC = window.rootViewController as! UINavigationController
+                        rootVC.pushViewController(vc!, animated: true)
+                        
+                }
             
+                default:
             
-        case 2:
-            
-            print("You picked My Places")
-        
-            if let window = UIApplication.shared.keyWindow {
-                handleDismiss()
-                let vc = MyFavoritePlacesViewController()
-                let rootVC = window.rootViewController as! UINavigationController
-                rootVC.pushViewController(vc, animated: true)
-                
-            }
-            
-        default:
-            
-            print("You picked invalid cells")
+                    print("There was an error")
             
         }
-        
-        
-        
     }
-    
 }

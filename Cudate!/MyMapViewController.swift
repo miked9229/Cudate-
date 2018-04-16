@@ -15,6 +15,7 @@ class MyMapViewController: UIViewController {
     override func viewDidLoad() {
         view.backgroundColor = .blue
         navigationController?.navigationBar.backgroundColor = .black
+        navigationController?.isToolbarHidden = false
         
     }
     

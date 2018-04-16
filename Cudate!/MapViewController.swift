@@ -67,6 +67,7 @@ class MapViewController: UIViewController  {
         view.backgroundColor = .white
         
         navigationController?.navigationBar.isHidden = true
+        navigationController?.isToolbarHidden = true
         
         if FIRAuth.auth()?.currentUser?.uid == nil {
             logOut()

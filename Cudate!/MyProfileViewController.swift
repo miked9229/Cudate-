@@ -16,6 +16,7 @@ class MyProfileViewController: UIViewController {
         view.backgroundColor = .blue
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.backgroundColor = .black
+        navigationController?.isToolbarHidden = false
         
         
         
