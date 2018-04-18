@@ -114,7 +114,6 @@ class MapViewController: UIViewController  {
 }
 
 
-
 //MARK: MapViewController: CLLocationManagerDelegate
 
 extension MapViewController: CLLocationManagerDelegate {

@@ -6,9 +6,9 @@
 //  Copyright © 2018 Michael Doroff. All rights reserved.
 //
 
-import Foundation
 import UIKit
-
+import LBTAComponents
+import MapKit
 
 class MyMapViewController: UIViewController {
     
@@ -19,7 +19,17 @@ class MyMapViewController: UIViewController {
         
     }
     
+    let mapView: MKMapView = {
+        let mapview = MKMapView()
+        return mapview
+        
+    }()
     
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.addSubview(mapView)
+         mapView.fillSuperview()
+    }
     
 }
