@@ -146,7 +146,6 @@ class LoginViewController: UIViewController {
         nameTextField.isHidden = true
         setUpEmailPasswordFields()
     
-        
         nameTextField.delegate = self
         passwordTextField.delegate = self
         emailTextField.delegate = self

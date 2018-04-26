@@ -25,11 +25,10 @@ class MyMapViewController: UIViewController {
         
     }()
     
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         view.addSubview(mapView)
-         mapView.fillSuperview()
+        mapView.fillSuperview()
     }
     
 }
