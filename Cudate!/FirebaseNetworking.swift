@@ -10,15 +10,18 @@ import Foundation
 import FirebaseAuth
 import UIKit
 
-
-
+// MARRK: Firebase
 class Firebase {
+    
+    // This class is defined to handle any calls to the Firebase application.
+    // Firebase in this iOS app is used primarily for User Authentication
+    // and data storage.
+    //
     
     public func registerUserUsingEmailAndPassword(email: UITextField, password: UITextField, completionHandlerForRegistration: @escaping(_ user: FIRUser?, _ error: NSError?) -> Void) {
         
         guard let email = email.text, let password = password.text else { return }
     
-   
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
             
             if error != nil {
@@ -30,7 +33,6 @@ class Firebase {
         })
     
     }
-    
     
     public func loginUserUsingEmailAndPassword(email: UITextField, password: UITextField, completionHandlerforLogIn: @escaping(_ user: FIRUser?, _ error: NSError?) -> Void) {
         
@@ -52,13 +54,22 @@ class Firebase {
     
     public func HandleVerification(completionHandlerForVerification: @escaping(_ error: NSError?) -> Void){
         
+        FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (callbackError) in })
+    }
+    
+    
+    public func returnDataFromFirebaseForUserID() {
         
-        FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (callbackError) in
-
-            //            completionHandlerForVerification(error)
-        })
+        let uid = FIRAuth.auth()!.currentUser?.uid
+        print(uid)
         
-
+        guard let userid = uid else { return }
+        
+        
+        
+    
+    
+    
     }
     
 }

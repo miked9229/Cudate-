@@ -8,6 +8,7 @@
 
 import XCTest
 import FirebaseAuth
+import Firebase
 @testable import Cudate_
 
 class Cudate_Tests: XCTestCase {

@@ -13,7 +13,7 @@ import UIKit
 class MyFavoritePlacesViewController: UIViewController {
     
     override func viewDidLoad() {
-        view.backgroundColor = .blue
+        view.backgroundColor = .white
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.backgroundColor = .black
         navigationController?.isToolbarHidden = false

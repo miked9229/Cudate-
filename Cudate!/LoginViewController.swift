@@ -139,6 +139,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+       
         super.viewDidLoad()
         view?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
         checkIfDeviceIsAlreadyLoggedIn()

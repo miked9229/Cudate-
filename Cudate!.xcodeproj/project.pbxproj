@@ -30,6 +30,9 @@
 		926C488F2043AC4E00C7DDE1 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C488E2043AC4E00C7DDE1 /* CustomCells.swift */; };
 		926C489A20537CCF00C7DDE1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C489920537CCF00C7DDE1 /* UIView.swift */; };
 		926C489C2057617500C7DDE1 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C489B2057617500C7DDE1 /* UICollectionView.swift */; };
+		92C2EFAC2099514300A26B90 /* ImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2EFAB2099514300A26B90 /* ImageViews.swift */; };
+		92C2EFAE209BED9F00A26B90 /* MapViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2EFAD209BED9F00A26B90 /* MapViews.swift */; };
+		92C2EFB0209BEDE600A26B90 /* SetupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2EFAF209BEDE600A26B90 /* SetupViews.swift */; };
 		92EB6A01207AEE2F003B2F6C /* ModelHandlingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB6A00207AEE2F003B2F6C /* ModelHandlingCode.swift */; };
 		92EB6A03207AEEC6003B2F6C /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB6A02207AEEC6003B2F6C /* MyMapViewController.swift */; };
 		92EB6A05207AEEE7003B2F6C /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB6A04207AEEE7003B2F6C /* MyProfileViewController.swift */; };
@@ -85,6 +88,9 @@
 		926C488E2043AC4E00C7DDE1 /* CustomCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
 		926C489920537CCF00C7DDE1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		926C489B2057617500C7DDE1 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		92C2EFAB2099514300A26B90 /* ImageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViews.swift; sourceTree = "<group>"; };
+		92C2EFAD209BED9F00A26B90 /* MapViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViews.swift; sourceTree = "<group>"; };
+		92C2EFAF209BEDE600A26B90 /* SetupViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViews.swift; sourceTree = "<group>"; };
 		92EB6A00207AEE2F003B2F6C /* ModelHandlingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHandlingCode.swift; sourceTree = "<group>"; };
 		92EB6A02207AEEC6003B2F6C /* MyMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
 		92EB6A04207AEEE7003B2F6C /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
@@ -160,7 +166,6 @@
 		9234ADAF1FA17EFB0012C0CA /* Cudate! */ = {
 			isa = PBXGroup;
 			children = (
-				926C489820537C7900C7DDE1 /* Extensions */,
 				9234ADE61FAA93BE0012C0CA /* NetworkingCode */,
 				9234ADE51FAA90D80012C0CA /* HelperFiles */,
 				9234ADE41FAA90C70012C0CA /* Controllers */,
@@ -191,12 +196,17 @@
 		9234ADE21FAA90B40012C0CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				926C489920537CCF00C7DDE1 /* UIView.swift */,
+				926C489B2057617500C7DDE1 /* UICollectionView.swift */,
 				924055381FC9D85200118235 /* CustomGeneralViews.swift */,
 				9240553D1FC9D95F00118235 /* CustomTextFields.swift */,
 				924055401FC9DBAA00118235 /* CusttomButtons.swift */,
 				92285389203A296D005F40A9 /* SettingsCell.swift */,
 				9228538B203A29B9005F40A9 /* BaseCell.swift */,
 				926C488E2043AC4E00C7DDE1 /* CustomCells.swift */,
+				92C2EFAB2099514300A26B90 /* ImageViews.swift */,
+				92C2EFAD209BED9F00A26B90 /* MapViews.swift */,
+				92C2EFAF209BEDE600A26B90 /* SetupViews.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -214,8 +224,8 @@
 			children = (
 				9234ADB21FA17EFB0012C0CA /* LoginViewController.swift */,
 				9234ADEB1FB14A8E0012C0CA /* MapViewController.swift */,
-				92EB6A02207AEEC6003B2F6C /* MyMapViewController.swift */,
 				92EB6A04207AEEE7003B2F6C /* MyProfileViewController.swift */,
+				92EB6A02207AEEC6003B2F6C /* MyMapViewController.swift */,
 				92EB6A06207AEF0B003B2F6C /* MyFavoritePlacesViewController.swift */,
 			);
 			name = Controllers;
@@ -243,15 +253,6 @@
 				9234ADE71FAA96850012C0CA /* FirebaseNetworking.swift */,
 			);
 			name = NetworkingCode;
-			sourceTree = "<group>";
-		};
-		926C489820537C7900C7DDE1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				926C489920537CCF00C7DDE1 /* UIView.swift */,
-				926C489B2057617500C7DDE1 /* UICollectionView.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 		A7598947D864CB8264246DEE /* Pods */ = {
@@ -587,7 +588,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C2EFAC2099514300A26B90 /* ImageViews.swift in Sources */,
 				9228538E203A2A08005F40A9 /* HelperClasses.swift in Sources */,
+				92C2EFB0209BEDE600A26B90 /* SetupViews.swift in Sources */,
+				92C2EFAE209BED9F00A26B90 /* MapViews.swift in Sources */,
 				9234ADE81FAA96850012C0CA /* FirebaseNetworking.swift in Sources */,
 				9243778F1FE7776500A7AAC5 /* HelperMethods.swift in Sources */,
 				92EB6A01207AEE2F003B2F6C /* ModelHandlingCode.swift in Sources */,

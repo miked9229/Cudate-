@@ -13,18 +13,14 @@ import MapKit
 class MyMapViewController: UIViewController {
     
     override func viewDidLoad() {
-        view.backgroundColor = .blue
+        
+        view.backgroundColor = .white
         navigationController?.navigationBar.backgroundColor = .black
         navigationController?.isToolbarHidden = false
         
     }
     
-    let mapView: MKMapView = {
-        let mapview = MKMapView()
-        return mapview
-        
-    }()
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         view.addSubview(mapView)
